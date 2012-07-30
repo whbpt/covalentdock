@@ -1,0 +1,897 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.6	//
+A1	parameters.h	/^{ NON, DS, D1, AS, A1, A2 };	\/* hbonding character: *\/$/;"	e	enum:hbond_type
+A2	parameters.h	/^{ NON, DS, D1, AS, A1, A2 };	\/* hbonding character: *\/$/;"	e	enum:hbond_type
+ACCEPT	constants.h	67;"	d
+ACLOCAL	Makefile	/^ACLOCAL = ${SHELL} \/home\/xouyang1\/B-bond\/autodock\/src\/autogrid\/missing --run aclocal-1.10$/;"	m
+ACLOCAL_M4	Makefile	/^ACLOCAL_M4 = $(top_srcdir)\/aclocal.m4$/;"	m
+AG_MAX_ATOMS	autogrid.h	58;"	d
+AMTAR	Makefile	/^AMTAR = ${SHELL} \/home\/xouyang1\/B-bond\/autodock\/src\/autogrid\/missing --run tar$/;"	m
+AM_CFLAGS	Makefile	/^AM_CFLAGS = -Wall -O3 # All warnings, Agressive optimization$/;"	m
+AM_CPPFLAGS	Makefile	/^AM_CPPFLAGS = -Wall -O3 -I$(srcdir)\/..\/autodock -Wno-write-strings # \\$/;"	m
+AS	parameters.h	/^{ NON, DS, D1, AS, A1, A2 };	\/* hbonding character: *\/$/;"	e	enum:hbond_type
+ATM1	constants.h	185;"	d
+ATM2	constants.h	186;"	d
+AUTOCONF	Makefile	/^AUTOCONF = ${SHELL} \/home\/xouyang1\/B-bond\/autodock\/src\/autogrid\/missing --run autoconf$/;"	m
+AUTOHEADER	Makefile	/^AUTOHEADER = ${SHELL} \/home\/xouyang1\/B-bond\/autodock\/src\/autogrid\/missing --run autoheader$/;"	m
+AUTOMAKE	Makefile	/^AUTOMAKE = ${SHELL} \/home\/xouyang1\/B-bond\/autodock\/src\/autogrid\/missing --run automake-1.10$/;"	m
+AWK	Makefile	/^AWK = gawk$/;"	m
+A_DIV	constants.h	147;"	d
+A_DIV	constants.h	159;"	d
+A_DIVISOR	autogrid.h	66;"	d
+Al	parm.h	63;"	d
+Ang_to_index	constants.h	283;"	d
+As	parm.h	64;"	d
+Atom	structs.h	/^} Atom;$/;"	t	typeref:struct:atom
+AutoGridHelp	setflags.cpp	/^static char    AutoGridHelp[] = "\\t-p parameter_filename\\n\\t\\t\\t-l log_filename\\n\\t\\t\\t-d (increment debug level)\\n\\t\\t\\t-h (display this message)\\n\\t\\t\\t--version (print version information, copyright, and license)\\n";$/;"	v	file:
+AutoGrid_control_test	Tests/test_autogrid4.py	/^class AutoGrid_control_test(AutoGrid_simple_test):$/;"	c	inherits:AutoGrid_simple_test
+AutoGrid_hsg1_sm_minus_two_types_test	Tests/test_autogrid4.py	/^class AutoGrid_hsg1_sm_minus_two_types_test(AutoGrid_hsg1_sm_test):$/;"	c	inherits:AutoGrid_hsg1_sm_test
+AutoGrid_hsg1_sm_minus_two_types_test.setUp	Tests/test_autogrid4.py	/^    def setUp(self):$/;"	m	class:AutoGrid_hsg1_sm_minus_two_types_test	access:public
+AutoGrid_hsg1_sm_no_parameter_library_test	Tests/test_autogrid4.py	/^class AutoGrid_hsg1_sm_no_parameter_library_test(AutoGrid_hsg1_sm_test):$/;"	c	inherits:AutoGrid_hsg1_sm_test
+AutoGrid_hsg1_sm_no_parameter_library_test.setUp	Tests/test_autogrid4.py	/^    def setUp(self):$/;"	m	class:AutoGrid_hsg1_sm_no_parameter_library_test	access:public
+AutoGrid_hsg1_sm_no_receptor_types_test	Tests/test_autogrid4.py	/^class AutoGrid_hsg1_sm_no_receptor_types_test(AutoGrid_hsg1_sm_test):$/;"	c	inherits:AutoGrid_hsg1_sm_test
+AutoGrid_hsg1_sm_no_receptor_types_test.setUp	Tests/test_autogrid4.py	/^    def setUp(self):$/;"	m	class:AutoGrid_hsg1_sm_no_receptor_types_test	access:public
+AutoGrid_hsg1_sm_test	Tests/test_autogrid4.py	/^class AutoGrid_hsg1_sm_test(unittest.TestCase):$/;"	c	inherits:unittest.TestCase
+AutoGrid_hsg1_sm_test.compare_autogrid4_maps	Tests/test_autogrid4.py	/^    def compare_autogrid4_maps(self, stem, maptype, precision=2):$/;"	m	class:AutoGrid_hsg1_sm_test	access:public
+AutoGrid_hsg1_sm_test.setUp	Tests/test_autogrid4.py	/^    def setUp(self):$/;"	m	class:AutoGrid_hsg1_sm_test	access:public
+AutoGrid_hsg1_sm_test.tearDown	Tests/test_autogrid4.py	/^    def tearDown(self):$/;"	m	class:AutoGrid_hsg1_sm_test	access:public
+AutoGrid_hsg1_sm_test.test_hsg1_A	Tests/test_autogrid4.py	/^    def test_hsg1_A(self):$/;"	m	class:AutoGrid_hsg1_sm_test	access:public
+AutoGrid_hsg1_sm_test.test_hsg1_C	Tests/test_autogrid4.py	/^    def test_hsg1_C(self):$/;"	m	class:AutoGrid_hsg1_sm_test	access:public
+AutoGrid_hsg1_sm_test.test_hsg1_HD	Tests/test_autogrid4.py	/^    def test_hsg1_HD(self):$/;"	m	class:AutoGrid_hsg1_sm_test	access:public
+AutoGrid_hsg1_sm_test.test_hsg1_N	Tests/test_autogrid4.py	/^    def test_hsg1_N(self):$/;"	m	class:AutoGrid_hsg1_sm_test	access:public
+AutoGrid_hsg1_sm_test.test_hsg1_NA	Tests/test_autogrid4.py	/^    def test_hsg1_NA(self):$/;"	m	class:AutoGrid_hsg1_sm_test	access:public
+AutoGrid_hsg1_sm_test.test_hsg1_OA	Tests/test_autogrid4.py	/^    def test_hsg1_OA(self):$/;"	m	class:AutoGrid_hsg1_sm_test	access:public
+AutoGrid_hsg1_sm_test.test_hsg1_dsolv	Tests/test_autogrid4.py	/^    def test_hsg1_dsolv(self):$/;"	m	class:AutoGrid_hsg1_sm_test	access:public
+AutoGrid_hsg1_sm_test.test_hsg1_estat	Tests/test_autogrid4.py	/^    def test_hsg1_estat(self):$/;"	m	class:AutoGrid_hsg1_sm_test	access:public
+AutoGrid_ligand_types_before_receptor_test	Tests/test_autogrid4.py	/^class AutoGrid_ligand_types_before_receptor_test(AutoGrid_hsg1_sm_test):$/;"	c	inherits:AutoGrid_hsg1_sm_test
+AutoGrid_ligand_types_before_receptor_test.setUp	Tests/test_autogrid4.py	/^    def setUp(self):$/;"	m	class:AutoGrid_ligand_types_before_receptor_test	access:public
+AutoGrid_missing_Amap_test	Tests/test_autogrid4.py	/^class AutoGrid_missing_Amap_test(AutoGrid_simple_test):$/;"	c	inherits:AutoGrid_simple_test
+AutoGrid_missing_dsolvmap_test	Tests/test_autogrid4.py	/^class AutoGrid_missing_dsolvmap_test(AutoGrid_simple_test):$/;"	c	inherits:AutoGrid_simple_test
+AutoGrid_missing_elecmap_test	Tests/test_autogrid4.py	/^class AutoGrid_missing_elecmap_test(AutoGrid_simple_test):$/;"	c	inherits:AutoGrid_simple_test
+AutoGrid_simple_test	Tests/test_autogrid4.py	/^class AutoGrid_simple_test(unittest.TestCase):$/;"	c	inherits:unittest.TestCase
+AutoGrid_simple_test.setUp	Tests/test_autogrid4.py	/^    def setUp(self):$/;"	m	class:AutoGrid_simple_test	access:public
+AutoGrid_simple_test.test_glg_exists	Tests/test_autogrid4.py	/^    def test_glg_exists(self):$/;"	m	class:AutoGrid_simple_test	access:public
+B	parm.h	59;"	d
+BUILT_SOURCES	Makefile	/^BUILT_SOURCES = default_parameters.h$/;"	m
+B_constrain	structs.h	/^  Boole B_constrain;		\/* TRUE if any distance constraints *\/$/;"	m	struct:group	access:public
+Bac	parm.h	60;"	d
+Be	parm.h	65;"	d
+Bond	structs.h	/^} Bond;$/;"	t	typeref:struct:bond
+BoundedAng_to_index	constants.h	286;"	d
+BoundedNdiel	constants.h	303;"	d
+BoundedNeint	constants.h	300;"	d
+BoundedSqAng_to_index	constants.h	297;"	d
+Box	parm.h	61;"	d
+Br	parm.h	66;"	d
+C1	parm.h	29;"	d
+C2	parm.h	28;"	d
+C3	parm.h	27;"	d
+CC	Makefile	/^CC = gcc$/;"	m
+CCDEPMODE	Makefile	/^CCDEPMODE = depmode=gcc3$/;"	m
+CCLD	Makefile	/^CCLD = $(CC)$/;"	m
+CFLAGS	Makefile	/^CFLAGS = -g -O2$/;"	m
+CLEANFILES	Makefile	/^CLEANFILES = default_parameters.h$/;"	m
+CLOCKS_PER_SEC	constants.h	385;"	d
+COMPILE	Makefile	/^COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \\$/;"	m
+CONFIG_CLEAN_FILES	Makefile	/^CONFIG_CLEAN_FILES = read_parameter_library.cpp$/;"	m
+CONSTANTS	constants.h	64;"	d
+CONST_FLOAT	constants.h	398;"	d
+CONST_FLOAT	constants.h	401;"	d
+CONST_INT	constants.h	397;"	d
+CONST_INT	constants.h	400;"	d
+CPP	Makefile	/^CPP = gcc -E$/;"	m
+CPPFLAGS	Makefile	/^CPPFLAGS = $/;"	m
+CTAGS	Makefile	/^CTAGS = ctags$/;"	m
+CXX	Makefile	/^CXX = g++$/;"	m
+CXXCOMPILE	Makefile	/^CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \\$/;"	m
+CXXDEPMODE	Makefile	/^CXXDEPMODE = depmode=gcc3$/;"	m
+CXXFLAGS	Makefile	/^CXXFLAGS = -g -O2$/;"	m
+CXXLD	Makefile	/^CXXLD = $(CXX)$/;"	m
+CXXLINK	Makefile	/^CXXLINK = $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(AM_LDFLAGS) $(LDFLAGS) \\$/;"	m
+CYGPATH_W	Makefile	/^CYGPATH_W = echo$/;"	m
+CYLINDRICAL	autogrid.h	63;"	d
+Ca	parm.h	67;"	d
+Cac	parm.h	30;"	d
+Charge	structs.h	/^} Charge;$/;"	t	typeref:struct:chargestruct
+Cl	parm.h	68;"	d
+Coord	structs.h	/^} Coord;$/;"	t	typeref:struct:coord
+Cpl	parm.h	31;"	d
+Cu	parm.h	69;"	d
+D1	parameters.h	/^{ NON, DS, D1, AS, A1, A2 };	\/* hbonding character: *\/$/;"	e	enum:hbond_type
+DEBUG_STUFF	constants.h	358;"	d
+DEFAULT_INCLUDES	Makefile	/^DEFAULT_INCLUDES = -I.$/;"	m
+DEFHWDTH	constants.h	127;"	d
+DEFS	Makefile	/^DEFS = -DPACKAGE_NAME=\\"autogrid\\" -DPACKAGE_TARNAME=\\"autogrid\\" -DPACKAGE_VERSION=\\"4.2.3\\" -DPACKAGE_STRING=\\"autogrid\\ 4.2.3\\" -DPACKAGE_BUGREPORT=\\"autodock@scripps.edu\\" -DPACKAGE=\\"autogrid\\" -DVERSION=\\"4.2.3\\" -DHAVE_LIBM=1 -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE__BOOL=1 -DHAVE_STDBOOL_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MALLOC=1 -DHAVE_GETHOSTNAME=1 -DHAVE_POW=1 -DHAVE_ROUND=1 -DHAVE_SQRT=1 -DHAVE_STRNCASECMP=1$/;"	m
+DEPDIR	Makefile	/^DEPDIR = .deps$/;"	m
+DISTFILES	Makefile	/^DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)$/;"	m
+DIST_ARCHIVES	Makefile	/^DIST_ARCHIVES = $(distdir).tar.gz$/;"	m
+DIST_COMMON	Makefile	/^DIST_COMMON = README $(am__configure_deps) $(srcdir)\/Makefile.am \\$/;"	m
+DIST_SOURCES	Makefile	/^DIST_SOURCES = $(autogrid4_SOURCES)$/;"	m
+DPrint	constants.h	374;"	d
+DS	parameters.h	/^{ NON, DS, D1, AS, A1, A2 };	\/* hbonding character: *\/$/;"	e	enum:hbond_type
+Deg	constants.h	250;"	d
+DisCon	structs.h	/^} DisCon;$/;"	t	typeref:struct:dist_constraint
+Div2Rad	constants.h	124;"	d
+ECHO_C	Makefile	/^ECHO_C = $/;"	m
+ECHO_N	Makefile	/^ECHO_N = -n$/;"	m
+ECHO_T	Makefile	/^ECHO_T = $/;"	m
+EGREP	Makefile	/^EGREP = \/bin\/grep -E$/;"	m
+ENERGY_CUTOFF	constants.h	136;"	d
+EPSIJ_MAX	constants.h	208;"	d
+EPSIJ_MIN	constants.h	207;"	d
+ERROR	main.cpp	81;"	d	file:
+ETAGS	Makefile	/^ETAGS = etags$/;"	m
+EXEEXT	Makefile	/^EXEEXT = $/;"	m
+EXTRA_DIST	Makefile	/^EXTRA_DIST = Tests$/;"	m
+Energy	structs.h	/^} Energy;$/;"	t	typeref:struct:energy
+EnergyTables	structs.h	/^} EnergyTables;$/;"	t	typeref:struct:energy_tables
+FATAL_ERROR	main.cpp	80;"	d	file:
+FE	structs.h	/^  double FE;			\/* estimated Free Energy of binding *\/$/;"	m	struct:energy	access:public
+FN_gdfld	grid.h	/^    char            FN_gdfld[MAX_CHARS]; \/\/ filename of the field file$/;"	m	struct:grid_map_set_info	access:public
+FN_gpf	grid.h	/^    char            FN_gpf[MAX_CHARS]; \/\/ filename of the AutoGrid parameter file$/;"	m	struct:grid_map_set_info	access:public
+FN_receptor	grid.h	/^    char            FN_receptor[MAX_CHARS]; \/\/ filename of the receptor used to calculate the grids$/;"	m	struct:grid_map_set_info	access:public
+FORMAT_PDB2_ATOM	constants.h	420;"	d
+FORMAT_PDBQT_ATOM	constants.h	439;"	d
+FORMAT_PDBQ_ATOM_RANKRUN_STR	constants.h	432;"	d
+FORMAT_PDBQ_ATOM_RESNUM	constants.h	431;"	d
+FORMAT_PDBQ_ATOM_RESSTR	constants.h	430;"	d
+FORMAT_PDBQ_ATOM_RUN_NUM	constants.h	433;"	d
+Fe	parm.h	71;"	d
+Fl	parm.h	70;"	d
+Float4	typedefs.h	/^} Float4;$/;"	t	typeref:union:__anon1
+FourByteLong	structs.h	/^typedef int FourByteLong;$/;"	t
+FourByteLong	structs.h	/^typedef long FourByteLong;$/;"	t
+FourByteLong	typedefs.h	/^    typedef int  FourByteLong;$/;"	t
+FourByteLong	typedefs.h	/^    typedef long FourByteLong;$/;"	t
+GPF_COMMENT	gpftoken.h	28;"	d
+GPF_CONSTANT	gpftoken.h	44;"	d
+GPF_COVALENTMAP	gpftoken.h	45;"	d
+GPF_DIEL	gpftoken.h	39;"	d
+GPF_DISORDER	gpftoken.h	41;"	d
+GPF_DSOLVMAP	gpftoken.h	48;"	d
+GPF_ELECMAP	gpftoken.h	38;"	d
+GPF_FMAP	gpftoken.h	40;"	d
+GPF_GRIDCENTER	gpftoken.h	33;"	d
+GPF_GRIDFLD	gpftoken.h	30;"	d
+GPF_LIGAND_TYPES	gpftoken.h	34;"	d
+GPF_MAP	gpftoken.h	35;"	d
+GPF_NBP_COEFFS	gpftoken.h	36;"	d
+GPF_NBP_R_EPS	gpftoken.h	37;"	d
+GPF_NPTS	gpftoken.h	31;"	d
+GPF_NULL	gpftoken.h	27;"	d
+GPF_PARAM_FILE	gpftoken.h	47;"	d
+GPF_QASP	gpftoken.h	49;"	d
+GPF_RECEPTOR	gpftoken.h	29;"	d
+GPF_RECEPTOR_TYPES	gpftoken.h	46;"	d
+GPF_SMOOTH	gpftoken.h	42;"	d
+GPF_SOL_PAR	gpftoken.h	43;"	d
+GPF_SPACING	gpftoken.h	32;"	d
+GREP	Makefile	/^GREP = \/bin\/grep$/;"	m
+GRID_MACROS	grid.h	28;"	d
+GZIP_ENV	Makefile	/^GZIP_ENV = --best$/;"	m
+Ge	parm.h	72;"	d
+GridIndex	grid.h	86;"	d
+GridMapSetInfo	grid.h	/^}                   GridMapSetInfo;$/;"	t	typeref:struct:grid_map_set_info
+GridMapSetSize	grid.h	66;"	d
+Group	structs.h	/^} Group;$/;"	t	typeref:struct:group
+H	parm.h	53;"	d
+HC	parm.h	52;"	d
+HI_NRG_JUMP_FACTOR	constants.h	138;"	d
+I	parm.h	73;"	d
+IDmove	structs.h	/^  int IDmove[MAX_ATOMS];	\/* atom serial-IDs of atoms moved by this *\/$/;"	m	struct:torsion	access:public
+INFORMATION	main.cpp	83;"	d	file:
+INIT_NUM_GRID_PTS	main.cpp	417;"	d	file:
+INSTALL	Makefile	/^INSTALL = \/usr\/bin\/install -c$/;"	m
+INSTALL_DATA	Makefile	/^INSTALL_DATA = ${INSTALL} -m 644$/;"	m
+INSTALL_HEADER	Makefile	/^INSTALL_HEADER = $(INSTALL_DATA)$/;"	m
+INSTALL_PROGRAM	Makefile	/^INSTALL_PROGRAM = ${INSTALL}$/;"	m
+INSTALL_SCRIPT	Makefile	/^INSTALL_SCRIPT = ${INSTALL}$/;"	m
+INSTALL_STRIP_PROGRAM	Makefile	/^INSTALL_STRIP_PROGRAM = $(install_sh) -c -s$/;"	m
+INT_SQA_DIV	constants.h	150;"	d
+INT_SQA_DIV	constants.h	162;"	d
+INV_A_DIV	constants.h	148;"	d
+INV_A_DIV	constants.h	160;"	d
+INV_SQA_DIV	constants.h	151;"	d
+INV_SQA_DIV	constants.h	163;"	d
+IN_DOUBLE_QUOTED_TOKEN	util.cpp	37;"	d	file:
+IN_SINGLE_QUOTED_TOKEN	util.cpp	36;"	d	file:
+IN_UNQUOTED_TOKEN	util.cpp	38;"	d	file:
+ISNAN	constants.h	337;"	d
+ISNAN	constants.h	339;"	d
+K	parm.h	74;"	d
+LDFLAGS	Makefile	/^LDFLAGS = $/;"	m
+LIBOBJS	Makefile	/^LIBOBJS = $/;"	m
+LIBS	Makefile	/^LIBS = -lm $/;"	m
+LINK	Makefile	/^LINK = $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@$/;"	m
+LOWER	constants.h	81;"	d
+LTLIBOBJS	Makefile	/^LTLIBOBJS = $/;"	m
+Li	parm.h	75;"	d
+Linear_FE_Model	structs.h	/^} Linear_FE_Model;$/;"	t	typeref:struct:linear_FE_model
+MACROS	constants.h	241;"	d
+MAKEINFO	Makefile	/^MAKEINFO = ${SHELL} \/home\/xouyang1\/B-bond\/autodock\/src\/autogrid\/missing --run makeinfo$/;"	m
+MAXKEY	atom_parameter_manager.cpp	27;"	d	file:
+MAX_ATOMS	constants.h	102;"	d
+MAX_ATOMS	constants.h	97;"	d
+MAX_DIST	autogrid.h	56;"	d
+MAX_LEN_AUTOGRID_TYPE	autogrid.h	100;"	d
+MAX_LEN_AUTOGRID_TYPE	parameters.h	34;"	d
+MAX_NBDATA	constants.h	193;"	d
+MAX_NONBONDS	constants.h	104;"	d
+MAX_NONBONDS	constants.h	99;"	d
+MAX_NUM_AUTOGRID_TYPES	autogrid.h	98;"	d
+MAX_NUM_AUTOGRID_TYPES	parameters.h	33;"	d
+MAX_RECORDS	constants.h	103;"	d
+MAX_RECORDS	constants.h	98;"	d
+MAX_RUNS	constants.h	101;"	d
+MAX_RUNS	constants.h	96;"	d
+MAX_TORS	constants.h	108;"	d
+MAX_TORS_IN_ROTAMER	constants.h	109;"	d
+MAX_TOR_CON	constants.h	110;"	d
+MAX_TREES	constants.h	107;"	d
+MKDIR_P	Makefile	/^MKDIR_P = \/bin\/mkdir -p$/;"	m
+Mg	parm.h	76;"	d
+Mn	parm.h	77;"	d
+ModDeg	constants.h	252;"	d
+ModRad	constants.h	253;"	d
+Molecule	structs.h	/^} Molecule;$/;"	t	typeref:struct:molecule
+N1	parm.h	38;"	d
+N3	parm.h	35;"	d
+N3pl	parm.h	33;"	d
+NBC	constants.h	152;"	d
+NBC	constants.h	164;"	d
+NBC2	constants.h	153;"	d
+NBC2	constants.h	165;"	d
+NBCUTOFF	autogrid.h	68;"	d
+NBTYPE	constants.h	192;"	d
+NCOLS	constants.h	221;"	d
+NDIEL	constants.h	169;"	d
+NDIEL_1	constants.h	172;"	d
+NEINT	constants.h	145;"	d
+NEINT	constants.h	157;"	d
+NEINT_1	constants.h	146;"	d
+NEINT_1	constants.h	158;"	d
+NLIG	constants.h	84;"	d
+NLIGTOR	constants.h	85;"	d
+NMOL	constants.h	90;"	d
+NON	parameters.h	/^{ NON, DS, D1, AS, A1, A2 };	\/* hbonding character: *\/$/;"	e	enum:hbond_type
+NORMAL_INSTALL	Makefile	/^NORMAL_INSTALL = :$/;"	m
+NORMAL_UNINSTALL	Makefile	/^NORMAL_UNINSTALL = :$/;"	m
+NOT_IN_TOKEN	util.cpp	35;"	d	file:
+NQTN	constants.h	79;"	d
+NRES	constants.h	87;"	d
+NRESTOR	constants.h	88;"	d
+NROWS	constants.h	225;"	d
+NTORDIVS	constants.h	114;"	d
+NTORDIVS_2	constants.h	115;"	d
+NTRN	constants.h	78;"	d
+NUM_ALL_TYPES	autogrid.h	99;"	d
+NUM_ATM_MOVED	constants.h	188;"	d
+NUM_RECEPTOR_TYPES	main.cpp	223;"	d	file:
+Na	parm.h	78;"	d
+Nam	parm.h	39;"	d
+NewGridMapSet	grid.h	68;"	d
+Ni	parm.h	79;"	d
+Nox	parm.h	34;"	d
+Npl	parm.h	37;"	d
+Ntr	parm.h	36;"	d
+O2	parm.h	42;"	d
+O3	parm.h	41;"	d
+OBJEXT	Makefile	/^OBJEXT = o$/;"	m
+ONE_RAD_IN_DIVS	constants.h	116;"	d
+ORDERED	autogrid.h	62;"	d
+OUTLEV0_GENS	constants.h	229;"	d
+OUTLEV1_GENS	constants.h	230;"	d
+OUTLEV2_GENS	constants.h	231;"	d
+OUTNUMCLUST	constants.h	213;"	d
+Om	parm.h	43;"	d
+P3	parm.h	55;"	d
+PACKAGE	Makefile	/^PACKAGE = autogrid$/;"	m
+PACKAGE_BUGREPORT	Makefile	/^PACKAGE_BUGREPORT = autodock@scripps.edu$/;"	m
+PACKAGE_NAME	Makefile	/^PACKAGE_NAME = autogrid$/;"	m
+PACKAGE_STRING	Makefile	/^PACKAGE_STRING = autogrid 4.2.3$/;"	m
+PACKAGE_TARNAME	Makefile	/^PACKAGE_TARNAME = autogrid$/;"	m
+PACKAGE_VERSION	Makefile	/^PACKAGE_VERSION = 4.2.3$/;"	m
+PARSE_PAR_LINE	parse_param_line.h	28;"	d
+PAR_	partokens.h	48;"	d
+PAR_ATOM_PAR	partokens.h	55;"	d
+PAR_COMMENT	partokens.h	56;"	d
+PAR_DESOLV	partokens.h	53;"	d
+PAR_ESTAT	partokens.h	52;"	d
+PAR_HBOND	partokens.h	51;"	d
+PAR_NULL	partokens.h	49;"	d
+PAR_TOKENS	partokens.h	46;"	d
+PAR_TORS	partokens.h	54;"	d
+PAR_VDW	partokens.h	50;"	d
+PATH_SEPARATOR	Makefile	/^PATH_SEPARATOR = :$/;"	m
+PE	atom_parameter_manager.cpp	/^typedef ParameterEntry PE;$/;"	t	file:
+POST_INSTALL	Makefile	/^POST_INSTALL = :$/;"	m
+POST_UNINSTALL	Makefile	/^POST_UNINSTALL = :$/;"	m
+PRECISION	autogrid.h	70;"	d
+PRE_INSTALL	Makefile	/^PRE_INSTALL = :$/;"	m
+PRE_UNINSTALL	Makefile	/^PRE_UNINSTALL = :$/;"	m
+PRINTDATE	printdate.h	28;"	d
+PRINTHMS	printhms.h	28;"	d
+PROGRAMS	Makefile	/^PROGRAMS = $(bin_PROGRAMS)$/;"	m
+Pac	parm.h	56;"	d
+PairID	structs.h	/^} PairID;$/;"	t	typeref:struct:pair_id
+ParameterEntry	parameters.h	/^} ParameterEntry;$/;"	t	typeref:struct:parameter_entry
+Pb	parm.h	80;"	d
+Pox	parm.h	57;"	d
+PrintDebugTors	constants.h	369;"	d
+PrintDebugTors2	constants.h	370;"	d
+Q	structs.h	/^  Quat Q;			\/* rigid-body orientation *\/$/;"	m	struct:state	access:public
+QUAT	constants.h	76;"	d
+QW	constants.h	75;"	d
+QX	constants.h	72;"	d
+QY	constants.h	73;"	d
+QZ	constants.h	74;"	d
+Quat	structs.h	/^} Quat;$/;"	t	typeref:struct:quat
+REJECT	constants.h	66;"	d
+RIJ_MAX	constants.h	206;"	d
+RIJ_MIN	constants.h	205;"	d
+RMIN_ELEC	constants.h	199;"	d
+RMIN_ELEC2	constants.h	200;"	d
+Rad	constants.h	249;"	d
+Rad2Div	constants.h	121;"	d
+Randpm1	constants.h	344;"	d
+RandpmPI	constants.h	345;"	d
+Real	typedefs.h	/^    typedef double Real;$/;"	t
+Real	typedefs.h	/^    typedef float Real;$/;"	t
+RedFac	constants.h	265;"	d
+Rij	parameters.h	/^  double Rij;			\/* Lennard-Jones equilibrium separation *\/$/;"	m	struct:parameter_entry	access:public
+Rij_hb	parameters.h	/^  double Rij_hb;		\/* 12-10 Lennard-Jones equilibrium separation *\/$/;"	m	struct:parameter_entry	access:public
+Rotamer	structs.h	/^} Rotamer;$/;"	t	typeref:struct:rotamer
+S	parm.h	50;"	d
+S	structs.h	/^  State             S;		                    	\/* state of molecule *\/$/;"	m	struct:molecule	access:public
+S2	parm.h	47;"	d
+S3	parm.h	46;"	d
+S3pl	parm.h	45;"	d
+SET_MAKE	Makefile	/^SET_MAKE = $/;"	m
+SHELL	Makefile	/^SHELL = \/bin\/sh$/;"	m
+SOURCES	Makefile	/^SOURCES = $(autogrid4_SOURCES)$/;"	m
+SPHERICAL	autogrid.h	64;"	d
+SQ	constants.h	271;"	d
+SQA_DIV	constants.h	149;"	d
+SQA_DIV	constants.h	161;"	d
+STRIP	Makefile	/^STRIP = $/;"	m
+SUGGESTION	main.cpp	84;"	d	file:
+Sac	parm.h	48;"	d
+Si	parm.h	81;"	d
+Sox	parm.h	49;"	d
+SqAng_to_index	constants.h	292;"	d
+SqAng_to_index_Int	constants.h	294;"	d
+SqAng_to_index_NBC2	constants.h	293;"	d
+State	structs.h	/^} State;$/;"	t	typeref:struct:state
+T	structs.h	/^  Coord T;			\/* coordinates of center of molecule *\/$/;"	m	struct:state	access:public
+TIMESYS	timesys.h	28;"	d
+TIMESYSHMS	timesyshms.h	28;"	d
+TINYDELTA	constants.h	195;"	d
+TORBARMAX	constants.h	126;"	d
+TOR_ARG_LIST	constants.h	133;"	d
+TYPE1	constants.h	190;"	d
+TYPE2	constants.h	191;"	d
+Torsion	structs.h	/^} Torsion;$/;"	t	typeref:struct:torsion
+U	constants.h	69;"	d
+UPPER	constants.h	82;"	d
+UnsignedFourByteLong	structs.h	/^typedef unsigned int UnsignedFourByteLong;$/;"	t
+UnsignedFourByteLong	structs.h	/^typedef unsigned long UnsignedFourByteLong;$/;"	t
+UnsignedFourByteLong	typedefs.h	/^    typedef unsigned int UnsignedFourByteLong;$/;"	t
+UnsignedFourByteLong	typedefs.h	/^    typedef unsigned long UnsignedFourByteLong;$/;"	t
+V	constants.h	70;"	d
+VERSION	Makefile	/^VERSION = 4.2.3$/;"	m
+Vector	structs.h	/^typedef double Vector [3];  \/\/ for vectors and points$/;"	t
+W	constants.h	71;"	d
+WARNING	main.cpp	82;"	d	file:
+WORDLEN	constants.h	92;"	d
+WinMain	main.cpp	/^int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInst,$/;"	f	signature:(HINSTANCE hInst, HINSTANCE hPrevInst, LPSTR Args, int WinMode)
+Wrp	constants.h	255;"	d
+WrpDeg	constants.h	256;"	d
+WrpModRad	constants.h	258;"	d
+WrpRad	constants.h	257;"	d
+Zn	parm.h	82;"	d
+_APM_PROTOTYPES	atom_parameter_manager.h	28;"	d
+_CONST_INT	constants.h	390;"	d
+_DISTDEPDIEL	distdepdiel.h	28;"	d
+_PARAMETERS_H	parameters.h	28;"	d
+_PDB_FORMATS	constants.h	407;"	d
+_RANLIB_H	ranlib.h	29;"	d
+_STRUCTS_H	structs.h	28;"	d
+_TYPEDEFS_H	typedefs.h	28;"	d
+__anon1::elements	typedefs.h	/^	float		 elements[4];$/;"	m	union:__anon1
+__anon1::vec	typedefs.h	/^	vector float vec;$/;"	m	union:__anon1
+abs_builddir	Makefile	/^abs_builddir = \/home\/xouyang1\/B-bond\/autodock\/src\/autogrid$/;"	m
+abs_charge	structs.h	/^    double abs_charge;$/;"	m	struct:chargestruct	access:public
+abs_charge	structs.h	/^  double    abs_charge;$/;"	m	struct:atom	access:public
+abs_srcdir	Makefile	/^abs_srcdir = \/home\/xouyang1\/B-bond\/autodock\/src\/autogrid$/;"	m
+abs_top_builddir	Makefile	/^abs_top_builddir = \/home\/xouyang1\/B-bond\/autodock\/src\/autogrid$/;"	m
+abs_top_srcdir	Makefile	/^abs_top_srcdir = \/home\/xouyang1\/B-bond\/autodock\/src\/autogrid$/;"	m
+ac_ct_CC	Makefile	/^ac_ct_CC = gcc$/;"	m
+ac_ct_CXX	Makefile	/^ac_ct_CXX = g++$/;"	m
+ad_fopen	autogrid.h	/^FILE *ad_fopen(const char *path, const char *mode);$/;"	p	signature:(const char *path, const char *mode)
+ad_fopen	main.cpp	/^FILE *ad_fopen(const char *path, const char *mode)$/;"	f	signature:(const char *path, const char *mode)
+advnst	ranlib.h	/^extern void advnst(FourByteLong k);$/;"	p	signature:(FourByteLong k)
+am__CONFIG_DISTCLEAN_FILES	Makefile	/^am__CONFIG_DISTCLEAN_FILES = config.status config.cache config.log \\$/;"	m
+am__aclocal_m4_deps	Makefile	/^am__aclocal_m4_deps = $(top_srcdir)\/configure.ac$/;"	m
+am__cd	Makefile	/^am__cd = CDPATH="$${ZSH_VERSION+.}$(PATH_SEPARATOR)" && cd$/;"	m
+am__configure_deps	Makefile	/^am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \\$/;"	m
+am__depfiles_maybe	Makefile	/^am__depfiles_maybe = depfiles$/;"	m
+am__include	Makefile	/^am__include = include$/;"	m
+am__installdirs	Makefile	/^am__installdirs = "$(DESTDIR)$(bindir)"$/;"	m
+am__leading_dot	Makefile	/^am__leading_dot = .$/;"	m
+am__quote	Makefile	/^am__quote = $/;"	m
+am__remove_distdir	Makefile	/^am__remove_distdir = \\$/;"	m
+am__tar	Makefile	/^am__tar = ${AMTAR} chof - "$$tardir"$/;"	m
+am__untar	Makefile	/^am__untar = ${AMTAR} xf -$/;"	m
+am_autogrid4_OBJECTS	Makefile	/^am_autogrid4_OBJECTS = autogrid4-main.$(OBJEXT) \\$/;"	m
+ang	structs.h	/^  double ang;			\/* angle of rotation about unit-vector *\/$/;"	m	struct:quat	access:public
+angstrom	autogrid.h	88;"	d
+apm_enter	atom_parameter_manager.cpp	/^void apm_enter(const char key[], PE value) {$/;"	f	signature:(const char key[], PE value)
+apm_enter	atom_parameter_manager.h	/^void apm_enter(const char key[], ParameterEntry value);$/;"	p	signature:(const char key[], ParameterEntry value)
+apm_enter	prototypes.h	/^void    apm_enter( const char key[], ParameterEntry value );$/;"	p	signature:( const char key[], ParameterEntry value )
+apm_find	atom_parameter_manager.cpp	/^PE * apm_find(const char key[]) {$/;"	f	signature:(const char key[])
+apm_find	atom_parameter_manager.h	/^ParameterEntry * apm_find(const char key[]);$/;"	p	signature:(const char key[])
+apm_find	prototypes.h	/^ParameterEntry * apm_find( const char key[] );$/;"	p	signature:( const char key[] )
+app_graphics_render	main.cpp	/^void app_graphics_render(int xs, int ys, double time_of_day) {}$/;"	f	signature:(int xs, int ys, double time_of_day)
+app_graphics_reread_prefs	main.cpp	/^void app_graphics_reread_prefs(){}$/;"	f	signature:()
+arithmetic_mean	constants.h	267;"	d
+as_func_failure	configure	/^as_func_failure () {$/;"	f
+as_func_ret_failure	configure	/^as_func_ret_failure () {$/;"	f
+as_func_ret_success	configure	/^as_func_ret_success () {$/;"	f
+as_func_success	configure	/^as_func_success () {$/;"	f
+atm	structs.h	/^  Atom atm[MAX_ATOMS];		\/* Atom data *\/$/;"	m	struct:group	access:public
+atom	structs.h	/^typedef struct atom$/;"	s
+atom1	structs.h	/^  Atom *atom1;			\/* pointer to one atom in pair *\/$/;"	m	struct:pair_id	access:public
+atom1	structs.h	/^  Atom *atom1;$/;"	m	struct:bond	access:public
+atom2	structs.h	/^  Atom *atom2;			\/* pointer to other atom *\/$/;"	m	struct:pair_id	access:public
+atom2	structs.h	/^  Atom *atom2;$/;"	m	struct:bond	access:public
+atom::abs_charge	structs.h	/^  double    abs_charge;$/;"	m	struct:atom	access:public
+atom::charge	structs.h	/^  double    charge;$/;"	m	struct:atom	access:public
+atom::coords	structs.h	/^  double    coords[3];			    \/* transformed point *\/$/;"	m	struct:atom	access:public
+atom::has_charge	structs.h	/^  Boole     has_charge;			    \/* TRUE if the atom has a charge *\/$/;"	m	struct:atom	access:public
+atom::is_hydrogen	structs.h	/^  Boole     is_hydrogen;		    \/* TRUE if atom is a hydrogen *\/$/;"	m	struct:atom	access:public
+atom::name	structs.h	/^  char      name[5];			    \/* PDB atom name; formerly "pdbaname" *\/$/;"	m	struct:atom	access:public
+atom::nnb	structs.h	/^  int       nnb;			        \/* number of non-bonds for this atom *\/$/;"	m	struct:atom	access:public
+atom::qsp_abs_charge	structs.h	/^  double    qsp_abs_charge;$/;"	m	struct:atom	access:public
+atom::serial	structs.h	/^  int       serial;			        \/* serial ID *\/$/;"	m	struct:atom	access:public
+atom::stuff	structs.h	/^  char      stuff[MAX_CHARS];       \/* PDB atom string; formerly "atomstuff" *\/$/;"	m	struct:atom	access:public
+atom::type	structs.h	/^  int       type;			        \/* atom type as integer *\/$/;"	m	struct:atom	access:public
+atom::type_string	structs.h	/^  char      type_string[MAX_CHARS]; \/* atom type as string *\/$/;"	m	struct:atom	access:public
+atom_type_name	grid.h	/^    char            atom_type_name[MAX_MAPS][3]; \/\/ array of atom type names, corresponding to the grids$/;"	m	struct:grid_map_set_info	access:public
+atomstr	structs.h	/^  char              atomstr[MAX_ATOMS][MAX_CHARS];	\/* strings describing atoms, from PDB file, cols,1-30. *\/$/;"	m	struct:molecule	access:public
+autogrid4_CPPFLAGS	Makefile	/^autogrid4_CPPFLAGS = $(AM_CPPFLAGS)$/;"	m
+autogrid4_LDADD	Makefile	/^autogrid4_LDADD = $(LDADD)$/;"	m
+autogrid4_LINK	Makefile	/^autogrid4_LINK = $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) \\$/;"	m
+autogrid4_OBJECTS	Makefile	/^autogrid4_OBJECTS = $(am_autogrid4_OBJECTS)$/;"	m
+autogrid4_SOURCES	Makefile	/^autogrid4_SOURCES = main.cpp \\$/;"	m
+autogrid_type	parameters.h	/^  char autogrid_type[MAX_LEN_AUTOGRID_TYPE + 1];	\/* autogrid_type is based on babel_types assigned by PyBabel *\/$/;"	m	struct:parameter_entry	access:public
+banner	banner.cpp	/^void banner( char * version_num )$/;"	f	signature:( char * version_num )
+banner	prototypes.h	/^void	banner( char * version_num );$/;"	p	signature:( char * version_num )
+binPROGRAMS_INSTALL	Makefile	/^binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)$/;"	m
+bin_PROGRAMS	Makefile	/^bin_PROGRAMS = autogrid4$(EXEEXT)$/;"	m
+bindir	Makefile	/^bindir = ${exec_prefix}\/bin$/;"	m
+boinc_app_key_press	main.cpp	/^void boinc_app_key_press(int wParam, int lParam){}$/;"	f	signature:(int wParam, int lParam)
+boinc_app_key_release	main.cpp	/^void boinc_app_key_release(int wParam, int lParam){}$/;"	f	signature:(int wParam, int lParam)
+boinc_app_mouse_button	main.cpp	/^void boinc_app_mouse_button(int x, int y, int which, bool is_down){}$/;"	f	signature:(int x, int y, int which, bool is_down)
+boinc_app_mouse_move	main.cpp	/^void boinc_app_mouse_move(int x, int y, bool left, bool middle, bool right ){}$/;"	f	signature:(int x, int y, bool left, bool middle, bool right )
+bond	structs.h	/^  PairID bond;			\/* two atoms defining distance constraint *\/$/;"	m	struct:dist_constraint	access:public
+bond	structs.h	/^typedef struct bond$/;"	s
+bond::atom1	structs.h	/^  Atom *atom1;$/;"	m	struct:bond	access:public
+bond::atom2	structs.h	/^  Atom *atom2;$/;"	m	struct:bond	access:public
+bond::bondLength	structs.h	/^  double bondLength;$/;"	m	struct:bond	access:public
+bond::bondVector	structs.h	/^  Coord bondVector;$/;"	m	struct:bond	access:public
+bondLength	structs.h	/^  double bondLength;$/;"	m	struct:bond	access:public
+bondVector	structs.h	/^  Coord bondVector;$/;"	m	struct:bond	access:public
+bond_index	parameters.h	/^  int bond_index;		\/* used to set up bonds; corresponds to the enum in mdist.h *\/$/;"	m	struct:parameter_entry	access:public
+build	Makefile	/^build = x86_64-unknown-linux-gnu$/;"	m
+build_alias	Makefile	/^build_alias = $/;"	m
+build_cpu	Makefile	/^build_cpu = x86_64$/;"	m
+build_os	Makefile	/^build_os = linux-gnu$/;"	m
+build_triplet	Makefile	/^build_triplet = x86_64-unknown-linux-gnu$/;"	m
+build_vendor	Makefile	/^build_vendor = unknown$/;"	m
+builddir	Makefile	/^builddir = .$/;"	m
+calc_ddd_Mehler_Solmajer	distdepdiel.cpp	/^double calc_ddd_Mehler_Solmajer( double distance, double approx_zero ) {$/;"	f	signature:( double distance, double approx_zero )
+calc_ddd_Mehler_Solmajer	distdepdiel.h	/^double calc_ddd_Mehler_Solmajer( double distance, double aprrox_zero );$/;"	p	signature:( double distance, double aprrox_zero )
+center	grid.h	/^    double          center[3]; \/\/ central coordinates, in Angstroms$/;"	m	struct:grid_map_set_info	access:public
+charge	structs.h	/^    double charge;$/;"	m	struct:chargestruct	access:public
+charge	structs.h	/^  double    charge;$/;"	m	struct:atom	access:public
+chargestruct	structs.h	/^typedef struct chargestruct$/;"	s
+chargestruct::abs_charge	structs.h	/^    double abs_charge;$/;"	m	struct:chargestruct	access:public
+chargestruct::charge	structs.h	/^    double charge;$/;"	m	struct:chargestruct	access:public
+chargestruct::qsp_abs_charge	structs.h	/^    double qsp_abs_charge;$/;"	m	struct:chargestruct	access:public
+check_size	check_size.cpp	/^int check_size(int nelements, $/;"	f	signature:(int nelements, char axischar)
+check_size	prototypes.h	/^int	    check_size( int nelements, char axischar );$/;"	p	signature:( int nelements, char axischar )
+clamp	constants.h	247;"	d
+coeff_desolv	structs.h	/^    double coeff_desolv;              \/\/ Free energy coefficient for desolvation term$/;"	m	struct:linear_FE_model	access:public
+coeff_estat	structs.h	/^    double coeff_estat;               \/\/ Free energy coefficient for electrostatics term$/;"	m	struct:linear_FE_model	access:public
+coeff_hbond	structs.h	/^    double coeff_hbond;               \/\/ Free energy coefficient for H-bonding term$/;"	m	struct:linear_FE_model	access:public
+coeff_tors	structs.h	/^    double coeff_tors;                \/\/ Free energy coefficient for torsional term$/;"	m	struct:linear_FE_model	access:public
+coeff_vdW	structs.h	/^    double coeff_vdW;                 \/\/ Free energy coefficient for van der Waals term$/;"	m	struct:linear_FE_model	access:public
+compare_autogrid4_maps	Tests/test_autogrid4.py	/^    def compare_autogrid4_maps(self, stem, maptype, precision=2):$/;"	m	class:AutoGrid_hsg1_sm_test	access:public
+coord	structs.h	/^typedef struct coord$/;"	s
+coord::x	structs.h	/^  double x;			\/* Cartesian x-coordinate *\/$/;"	m	struct:coord	access:public
+coord::y	structs.h	/^  double y;			\/* Cartesian y-coordinate *\/$/;"	m	struct:coord	access:public
+coord::z	structs.h	/^  double z;			\/* Cartesian z-coordinate *\/$/;"	m	struct:coord	access:public
+coords	structs.h	/^  double    coords[3];			    \/* transformed point *\/$/;"	m	struct:atom	access:public
+crd	structs.h	/^  Real     crd[MAX_ATOMS][SPACE];      	\/* current coordinates of atoms *\/$/;"	m	struct:molecule	access:public
+crdpdb	structs.h	/^  Real     crdpdb[MAX_ATOMS][SPACE];	    \/* original coordinates of atoms *\/$/;"	m	struct:molecule	access:public
+datadir	Makefile	/^datadir = ${datarootdir}$/;"	m
+datarootdir	Makefile	/^datarootdir = ${prefix}\/share$/;"	m
+dc_install_base	Makefile	/^	dc_install_base=`$(am__cd) $(distdir)\/_inst && pwd | sed -e 's,^[^:\\\\\/]:[\\\\\/],\/,'` \\$/;"	m
+depcomp	Makefile	/^depcomp = $(SHELL) $(top_srcdir)\/depcomp$/;"	m
+dictionary	atom_parameter_manager.cpp	/^static PE *dictionary[MAXKEY];$/;"	v	file:
+dist_constraint	structs.h	/^typedef struct dist_constraint$/;"	s
+dist_constraint::bond	structs.h	/^  PairID bond;			\/* two atoms defining distance constraint *\/$/;"	m	struct:dist_constraint	access:public
+dist_constraint::length	structs.h	/^  double length;		\/* current bond length *\/$/;"	m	struct:dist_constraint	access:public
+dist_constraint::lower	structs.h	/^  double lower;			\/* lower bound on distance *\/$/;"	m	struct:dist_constraint	access:public
+dist_constraint::upper	structs.h	/^  double upper;			\/* upper bound on distance *\/$/;"	m	struct:dist_constraint	access:public
+distcleancheck_listfiles	Makefile	/^distcleancheck_listfiles = find . -type f -print$/;"	m
+distcon	structs.h	/^  DisCon distcon;		\/* Distance constraint data *\/$/;"	m	struct:group	access:public
+distdir	Makefile	/^distdir = $(PACKAGE)-$(VERSION)$/;"	m
+distuninstallcheck_listfiles	Makefile	/^distuninstallcheck_listfiles = find . -type f -print$/;"	m
+docdir	Makefile	/^docdir = ${datarootdir}\/doc\/${PACKAGE_TARNAME}$/;"	m
+dvidir	Makefile	/^dvidir = ${docdir}$/;"	m
+e	structs.h	/^  Energy e;			\/* energy structure *\/$/;"	m	struct:state	access:public
+e_vdW_Hb	structs.h	/^    Real e_vdW_Hb[NEINT][MAX_ATOM_TYPES][MAX_ATOM_TYPES];  \/\/ vdW & Hb energies$/;"	m	struct:energy_tables	access:public
+elements	typedefs.h	/^	float		 elements[4];$/;"	m	union:__anon1
+energy	structs.h	/^typedef struct energy$/;"	s
+energy::FE	structs.h	/^  double FE;			\/* estimated Free Energy of binding *\/$/;"	m	struct:energy	access:public
+energy::inter	structs.h	/^  double inter;			\/* intermolecular energy *\/$/;"	m	struct:energy	access:public
+energy::intra	structs.h	/^  double intra;			\/* intramolecular energy, a.k.a. "internal" energy *\/$/;"	m	struct:energy	access:public
+energy::total	structs.h	/^  double total;			\/* total energy *\/$/;"	m	struct:energy	access:public
+energy_tables	structs.h	/^typedef struct energy_tables$/;"	s
+energy_tables::e_vdW_Hb	structs.h	/^    Real e_vdW_Hb[NEINT][MAX_ATOM_TYPES][MAX_ATOM_TYPES];  \/\/ vdW & Hb energies$/;"	m	struct:energy_tables	access:public
+energy_tables::epsilon_fn	structs.h	/^    Real epsilon_fn[NDIEL];                        \/\/ distance-dependent dielectric function$/;"	m	struct:energy_tables	access:public
+energy_tables::r_epsilon_fn	structs.h	/^    Real r_epsilon_fn[NDIEL];                      \/\/ r * distance-dependent dielectric function$/;"	m	struct:energy_tables	access:public
+energy_tables::sol_fn	structs.h	/^    Real sol_fn[NEINT];                            \/\/ distance-dependent desolvation function$/;"	m	struct:energy_tables	access:public
+epsij	parameters.h	/^  double epsij;			\/* Lennard-Jones energy well-depth *\/$/;"	m	struct:parameter_entry	access:public
+epsij_hb	parameters.h	/^  double epsij_hb;		\/* 12-10 Lennard-Jones energy well-depth *\/$/;"	m	struct:parameter_entry	access:public
+epsilon_fn	structs.h	/^    Real epsilon_fn[NDIEL];                        \/\/ distance-dependent dielectric function$/;"	m	struct:energy_tables	access:public
+equal	constants.h	243;"	d
+exec_prefix	Makefile	/^exec_prefix = ${prefix}$/;"	m
+find_success_in_GLG	Tests/test_autogrid4.py	/^def find_success_in_GLG( glg_filename ):$/;"	f	access:public
+genbet	ranlib.h	/^extern Real genbet(Real aa,Real bb);$/;"	p	signature:(Real aa,Real bb)
+genchi	ranlib.h	/^extern Real genchi(Real df);$/;"	p	signature:(Real df)
+genexp	ranlib.h	/^extern Real genexp(Real av);$/;"	p	signature:(Real av)
+genf	ranlib.h	/^extern Real genf(Real dfn, Real dfd);$/;"	p	signature:(Real dfn, Real dfd)
+gengam	ranlib.h	/^extern Real gengam(Real a,Real r);$/;"	p	signature:(Real a,Real r)
+genmn	ranlib.h	/^extern void genmn(Real *parm,Real *x,Real *work);$/;"	p	signature:(Real *parm,Real *x,Real *work)
+genmul	ranlib.h	/^extern void genmul(FourByteLong n,Real *p,FourByteLong ncat,FourByteLong *ix);$/;"	p	signature:(FourByteLong n,Real *p,FourByteLong ncat,FourByteLong *ix)
+gennch	ranlib.h	/^extern Real gennch(Real df,Real xnonc);$/;"	p	signature:(Real df,Real xnonc)
+gennf	ranlib.h	/^extern Real gennf(Real dfn, Real dfd, Real xnonc);$/;"	p	signature:(Real dfn, Real dfd, Real xnonc)
+gennor	ranlib.h	/^extern Real gennor(Real av,Real sd);$/;"	p	signature:(Real av,Real sd)
+genprm	ranlib.h	/^extern void genprm(FourByteLong *iarray,int larray);$/;"	p	signature:(FourByteLong *iarray,int larray)
+genunf	ranlib.h	/^extern Real genunf(Real low,Real high);$/;"	p	signature:(Real low,Real high)
+geometric_mean	constants.h	268;"	d
+get_Rij	parm.h	/^extern float get_Rij(int type1, int type2);$/;"	p	signature:(int type1, int type2)
+get_epsij	parm.h	/^extern float get_epsij(int type1, int type2);$/;"	p	signature:(int type1, int type2)
+get_rec_index	main.cpp	/^static int get_rec_index(const char key[]) {$/;"	f	file:	signature:(const char key[])
+get_rec_index	main.cpp	/^static int get_rec_index(const char key[]);$/;"	p	file:	signature:(const char key[])
+getsd	ranlib.h	/^extern void getsd(FourByteLong *iseed1,FourByteLong *iseed2);$/;"	p	signature:(FourByteLong *iseed1,FourByteLong *iseed2)
+gpfparser	gpfparser.cpp	/^int gpfparser( char line[LINE_LEN] )$/;"	f	signature:( char line[LINE_LEN] )
+gpfparser	prototypes.h	/^int	    gpfparser( char line[LINE_LEN] );$/;"	p	signature:( char line[LINE_LEN] )
+grid_map_set_info	grid.h	/^typedef struct      grid_map_set_info$/;"	s
+grid_map_set_info::FN_gdfld	grid.h	/^    char            FN_gdfld[MAX_CHARS]; \/\/ filename of the field file$/;"	m	struct:grid_map_set_info	access:public
+grid_map_set_info::FN_gpf	grid.h	/^    char            FN_gpf[MAX_CHARS]; \/\/ filename of the AutoGrid parameter file$/;"	m	struct:grid_map_set_info	access:public
+grid_map_set_info::FN_receptor	grid.h	/^    char            FN_receptor[MAX_CHARS]; \/\/ filename of the receptor used to calculate the grids$/;"	m	struct:grid_map_set_info	access:public
+grid_map_set_info::atom_type_name	grid.h	/^    char            atom_type_name[MAX_MAPS][3]; \/\/ array of atom type names, corresponding to the grids$/;"	m	struct:grid_map_set_info	access:public
+grid_map_set_info::center	grid.h	/^    double          center[3]; \/\/ central coordinates, in Angstroms$/;"	m	struct:grid_map_set_info	access:public
+grid_map_set_info::hi	grid.h	/^    double          hi[3]; \/\/ maximum coordinates, in Angstroms$/;"	m	struct:grid_map_set_info	access:public
+grid_map_set_info::inv_spacing	grid.h	/^    double          inv_spacing; \/\/ reciprocal of the uniform grid spacing in Angstroms^-1$/;"	m	struct:grid_map_set_info	access:public
+grid_map_set_info::lo	grid.h	/^    double          lo[3]; \/\/ minimum coordinates, in Angstroms$/;"	m	struct:grid_map_set_info	access:public
+grid_map_set_info::num_all_maps	grid.h	/^    int             num_all_maps; \/\/ number of all maps, = num_atom_types + 2$/;"	m	struct:grid_map_set_info	access:public
+grid_map_set_info::num_alloc	grid.h	/^    int             num_alloc[3]; \/\/ the dimensions allocated, >= num_points1; if this is a power of 2, it should be faster$/;"	m	struct:grid_map_set_info	access:public
+grid_map_set_info::num_alloc_maps	grid.h	/^    int             num_alloc_maps; \/\/ allocated number of maps, >= num_all_maps$/;"	m	struct:grid_map_set_info	access:public
+grid_map_set_info::num_atom_types	grid.h	/^    int             num_atom_types; \/\/ number of atom types$/;"	m	struct:grid_map_set_info	access:public
+grid_map_set_info::num_points	grid.h	/^    int             num_points[3]; \/\/ the actual dimensions of the grid minus 1; should be an even number$/;"	m	struct:grid_map_set_info	access:public
+grid_map_set_info::num_points1	grid.h	/^    int             num_points1[3]; \/\/ the actual dimensions of the grid; should be an odd number$/;"	m	struct:grid_map_set_info	access:public
+grid_map_set_info::spacing	grid.h	/^    double          spacing; \/\/ uniform grid spacing in Angstroms$/;"	m	struct:grid_map_set_info	access:public
+group	structs.h	/^typedef struct group$/;"	s
+group::B_constrain	structs.h	/^  Boole B_constrain;		\/* TRUE if any distance constraints *\/$/;"	m	struct:group	access:public
+group::atm	structs.h	/^  Atom atm[MAX_ATOMS];		\/* Atom data *\/$/;"	m	struct:group	access:public
+group::distcon	structs.h	/^  DisCon distcon;		\/* Distance constraint data *\/$/;"	m	struct:group	access:public
+group::natom	structs.h	/^  int natom;			\/* Number of atoms in fragment *\/$/;"	m	struct:group	access:public
+group::nbs	structs.h	/^  PairID nbs[MAX_NONBONDS];	\/* Non-bond data *\/$/;"	m	struct:group	access:public
+group::nnb	structs.h	/^  int nnb;			\/* Number of non-bonds in fragment *\/$/;"	m	struct:group	access:public
+group::ntor	structs.h	/^  int ntor;			\/* Number of torsions in fragment *\/$/;"	m	struct:group	access:public
+group::pdbqfilnam	structs.h	/^  char pdbqfilnam[MAX_CHARS];	\/* PDBQ filename holding these data *\/$/;"	m	struct:group	access:public
+group::tors	structs.h	/^  Torsion tors[MAX_TORS];	\/* Torsion data *\/$/;"	m	struct:group	access:public
+gscgn	ranlib.h	/^extern void gscgn(FourByteLong getset,FourByteLong *g);$/;"	p	signature:(FourByteLong getset,FourByteLong *g)
+hasEnergy	structs.h	/^  int hasEnergy;		\/* if 0, this state has an undefined energy *\/$/;"	m	struct:state	access:public
+has_charge	structs.h	/^  Boole     has_charge;			    \/* TRUE if the atom has a charge *\/$/;"	m	struct:atom	access:public
+hash	atom_parameter_manager.cpp	/^static unsigned int hash(const char key[]) {$/;"	f	file:	signature:(const char key[])
+hbond	parameters.h	/^  hbond_type hbond;		\/* hbonding character: $/;"	m	struct:parameter_entry	access:public
+hbond_type	parameters.h	/^enum hbond_type$/;"	g
+hi	grid.h	/^    double          hi[3]; \/\/ maximum coordinates, in Angstroms$/;"	m	struct:grid_map_set_info	access:public
+host	Makefile	/^host = x86_64-unknown-linux-gnu$/;"	m
+host_alias	Makefile	/^host_alias = $/;"	m
+host_cpu	Makefile	/^host_cpu = x86_64$/;"	m
+host_os	Makefile	/^host_os = linux-gnu$/;"	m
+host_triplet	Makefile	/^host_triplet = x86_64-unknown-linux-gnu$/;"	m
+host_vendor	Makefile	/^host_vendor = unknown$/;"	m
+htmldir	Makefile	/^htmldir = ${docdir}$/;"	m
+hypotenuse	constants.h	273;"	d
+hypotenuse4	constants.h	275;"	d
+hypotenuse4_F	constants.h	276;"	d
+hypotenuse_F	constants.h	274;"	d
+ignbin	ranlib.h	/^extern FourByteLong ignbin(FourByteLong n,Real pp);$/;"	p	signature:(FourByteLong n,Real pp)
+ignlgi	ranlib.h	/^extern FourByteLong ignlgi(void);$/;"	p	signature:(void)
+ignnbn	ranlib.h	/^extern FourByteLong ignnbn(FourByteLong n,Real p);$/;"	p	signature:(FourByteLong n,Real p)
+ignpoi	ranlib.h	/^extern FourByteLong ignpoi(Real mu);$/;"	p	signature:(Real mu)
+ignuin	ranlib.h	/^extern FourByteLong ignuin(FourByteLong low,FourByteLong high);$/;"	p	signature:(FourByteLong low,FourByteLong high)
+includedir	Makefile	/^includedir = ${prefix}\/include$/;"	m
+index_to_Ang	constants.h	280;"	d
+index_to_SqAng	constants.h	289;"	d
+infodir	Makefile	/^infodir = ${datarootdir}\/info$/;"	m
+initgn	ranlib.h	/^extern void initgn(FourByteLong isdtyp);$/;"	p	signature:(FourByteLong isdtyp)
+install_sh	Makefile	/^install_sh = $(SHELL) \/home\/xouyang1\/B-bond\/autodock\/src\/autogrid\/install-sh$/;"	m
+install_sh_DATA	Makefile	/^install_sh_DATA = $(install_sh) -c -m 644$/;"	m
+install_sh_PROGRAM	Makefile	/^install_sh_PROGRAM = $(install_sh) -c$/;"	m
+install_sh_SCRIPT	Makefile	/^install_sh_SCRIPT = $(install_sh) -c$/;"	m
+inter	structs.h	/^  double inter;			\/* intermolecular energy *\/$/;"	m	struct:energy	access:public
+intra	structs.h	/^  double intra;			\/* intramolecular energy, a.k.a. "internal" energy *\/$/;"	m	struct:energy	access:public
+inv_spacing	grid.h	/^    double          inv_spacing; \/\/ reciprocal of the uniform grid spacing in Angstroms^-1$/;"	m	struct:grid_map_set_info	access:public
+is_hydrogen	structs.h	/^  Boole     is_hydrogen;		    \/* TRUE if atom is a hydrogen *\/$/;"	m	struct:atom	access:public
+is_out_grid	constants.h	305;"	d
+is_out_grid_info	constants.h	307;"	d
+length	structs.h	/^  double length;		\/* current bond length *\/$/;"	m	struct:dist_constraint	access:public
+libdir	Makefile	/^libdir = ${exec_prefix}\/lib$/;"	m
+libexecdir	Makefile	/^libexecdir = ${exec_prefix}\/libexec$/;"	m
+linear_FE_model	structs.h	/^typedef struct linear_FE_model$/;"	s
+linear_FE_model::coeff_desolv	structs.h	/^    double coeff_desolv;              \/\/ Free energy coefficient for desolvation term$/;"	m	struct:linear_FE_model	access:public
+linear_FE_model::coeff_estat	structs.h	/^    double coeff_estat;               \/\/ Free energy coefficient for electrostatics term$/;"	m	struct:linear_FE_model	access:public
+linear_FE_model::coeff_hbond	structs.h	/^    double coeff_hbond;               \/\/ Free energy coefficient for H-bonding term$/;"	m	struct:linear_FE_model	access:public
+linear_FE_model::coeff_tors	structs.h	/^    double coeff_tors;                \/\/ Free energy coefficient for torsional term$/;"	m	struct:linear_FE_model	access:public
+linear_FE_model::coeff_vdW	structs.h	/^    double coeff_vdW;                 \/\/ Free energy coefficient for van der Waals term$/;"	m	struct:linear_FE_model	access:public
+linear_FE_model::stderr_desolv	structs.h	/^    double stderr_desolv;             \/\/ Free energy standard error for desolvation term$/;"	m	struct:linear_FE_model	access:public
+linear_FE_model::stderr_estat	structs.h	/^    double stderr_estat;              \/\/ Free energy standard error for electrostatics term$/;"	m	struct:linear_FE_model	access:public
+linear_FE_model::stderr_hbond	structs.h	/^    double stderr_hbond;              \/\/ Free energy standard error for H-bonding term$/;"	m	struct:linear_FE_model	access:public
+linear_FE_model::stderr_tors	structs.h	/^    double stderr_tors;               \/\/ Free energy standard error for torsional term$/;"	m	struct:linear_FE_model	access:public
+linear_FE_model::stderr_vdW	structs.h	/^    double stderr_vdW;                \/\/ Free energy standard error for van der Waals term$/;"	m	struct:linear_FE_model	access:public
+lo	grid.h	/^    double          lo[3]; \/\/ minimum coordinates, in Angstroms$/;"	m	struct:grid_map_set_info	access:public
+local_random	constants.h	322;"	d
+local_random	constants.h	326;"	d
+local_random	constants.h	332;"	d
+localedir	Makefile	/^localedir = ${datarootdir}\/locale$/;"	m
+localstatedir	Makefile	/^localstatedir = ${prefix}\/var$/;"	m
+lookup	autogrid.h	89;"	d
+lower	structs.h	/^  double lower;			\/* lower bound on distance *\/$/;"	m	struct:dist_constraint	access:public
+main	config.guess	/^		main()$/;"	f
+main	config.guess	/^	main ()$/;"	f
+main	config.guess	/^main ()$/;"	f
+main	convertmap.cpp	/^main(int argc, char *argv[])$/;"	f	signature:(int argc, char *argv[])
+main	main.cpp	/^int main( int argc,  char **argv )$/;"	f	signature:( int argc, char **argv )
+main	prototypes.h	/^int	    main( int argc, char **argv );$/;"	p	signature:( int argc, char **argv )
+mandir	Makefile	/^mandir = ${datarootdir}\/man$/;"	m
+map_index	parameters.h	/^  int map_index;		\/* used to set up map atom_types *\/$/;"	m	struct:parameter_entry	access:public
+max	autogrid.h	83;"	d
+max	autogrid.h	86;"	d
+max	constants.h	245;"	d
+min	autogrid.h	82;"	d
+min	autogrid.h	87;"	d
+min	constants.h	246;"	d
+mkdir_p	Makefile	/^mkdir_p = \/bin\/mkdir -p$/;"	m
+mkinstalldirs	Makefile	/^mkinstalldirs = $(install_sh) -d$/;"	m
+mltmod	ranlib.h	/^extern FourByteLong mltmod(FourByteLong a,FourByteLong s,FourByteLong m);$/;"	p	signature:(FourByteLong a,FourByteLong s,FourByteLong m)
+molecule	structs.h	/^typedef struct molecule$/;"	s
+molecule::S	structs.h	/^  State             S;		                    	\/* state of molecule *\/$/;"	m	struct:molecule	access:public
+molecule::atomstr	structs.h	/^  char              atomstr[MAX_ATOMS][MAX_CHARS];	\/* strings describing atoms, from PDB file, cols,1-30. *\/$/;"	m	struct:molecule	access:public
+molecule::crd	structs.h	/^  Real     crd[MAX_ATOMS][SPACE];      	\/* current coordinates of atoms *\/$/;"	m	struct:molecule	access:public
+molecule::crdpdb	structs.h	/^  Real     crdpdb[MAX_ATOMS][SPACE];	    \/* original coordinates of atoms *\/$/;"	m	struct:molecule	access:public
+molecule::natom	structs.h	/^  int               natom;			                \/* number of atoms in molecule *\/$/;"	m	struct:molecule	access:public
+molecule::tlist	structs.h	/^  int               tlist[MAX_TORS][MAX_ATOMS];	    \/* torsion list of movable atoms *\/$/;"	m	struct:molecule	access:public
+molecule::vt	structs.h	/^  Real     vt[MAX_TORS][SPACE];        	\/* vectors  of torsions *\/$/;"	m	struct:molecule	access:public
+name	structs.h	/^  char      name[5];			    \/* PDB atom name; formerly "pdbaname" *\/$/;"	m	struct:atom	access:public
+natom	structs.h	/^  int               natom;			                \/* number of atoms in molecule *\/$/;"	m	struct:molecule	access:public
+natom	structs.h	/^  int natom;			\/* Number of atoms in fragment *\/$/;"	m	struct:group	access:public
+nbs	structs.h	/^  PairID nbs[MAX_NONBONDS];	\/* Non-bond data *\/$/;"	m	struct:group	access:public
+nmoved	structs.h	/^  int nmoved;			\/* number of atoms moved by this *\/$/;"	m	struct:torsion	access:public
+nnb	structs.h	/^  int       nnb;			        \/* number of non-bonds for this atom *\/$/;"	m	struct:atom	access:public
+nnb	structs.h	/^  int nnb;			\/* Number of non-bonds in fragment *\/$/;"	m	struct:group	access:public
+ntor	structs.h	/^  int ntor;			\/* Number of torsions in fragment *\/$/;"	m	struct:group	access:public
+ntor	structs.h	/^  int ntor;			\/* number of torsions *\/$/;"	m	struct:rotamer	access:public
+ntor	structs.h	/^  int ntor;			\/* number of torsions in molecule *\/$/;"	m	struct:state	access:public
+num_all_maps	grid.h	/^    int             num_all_maps; \/\/ number of all maps, = num_atom_types + 2$/;"	m	struct:grid_map_set_info	access:public
+num_alloc	grid.h	/^    int             num_alloc[3]; \/\/ the dimensions allocated, >= num_points1; if this is a power of 2, it should be faster$/;"	m	struct:grid_map_set_info	access:public
+num_alloc_maps	grid.h	/^    int             num_alloc_maps; \/\/ allocated number of maps, >= num_all_maps$/;"	m	struct:grid_map_set_info	access:public
+num_atom_types	grid.h	/^    int             num_atom_types; \/\/ number of atom types$/;"	m	struct:grid_map_set_info	access:public
+num_atom_types	parm.h	84;"	d
+num_hbnd_types	parm.h	85;"	d
+num_points	grid.h	/^    int             num_points[3]; \/\/ the actual dimensions of the grid minus 1; should be an even number$/;"	m	struct:grid_map_set_info	access:public
+num_points1	grid.h	/^    int             num_points1[3]; \/\/ the actual dimensions of the grid; should be an odd number$/;"	m	struct:grid_map_set_info	access:public
+nx	structs.h	/^  double nx;			\/* unit vector's x-component *\/$/;"	m	struct:quat	access:public
+ny	structs.h	/^  double ny;			\/* unit vector's y-component *\/$/;"	m	struct:quat	access:public
+nz	structs.h	/^  double nz;			\/* unit vector's z-component *\/$/;"	m	struct:quat	access:public
+oldincludedir	Makefile	/^oldincludedir = \/usr\/include$/;"	m
+outputdir	Makefile	/^	outputdir=`pwd` ;\\$/;"	m
+pair_id	structs.h	/^typedef struct pair_id$/;"	s
+pair_id::atom1	structs.h	/^  Atom *atom1;			\/* pointer to one atom in pair *\/$/;"	m	struct:pair_id	access:public
+pair_id::atom2	structs.h	/^  Atom *atom2;			\/* pointer to other atom *\/$/;"	m	struct:pair_id	access:public
+param_string_4_0	default_parameters.h	/^char *param_string_4_0[MAX_LINES] = {$/;"	v
+param_string_4_1	default_parameters.h	/^char *param_string_4_1[MAX_LINES] = {$/;"	v
+parameter_entry	parameters.h	/^typedef struct parameter_entry$/;"	s
+parameter_entry::Rij	parameters.h	/^  double Rij;			\/* Lennard-Jones equilibrium separation *\/$/;"	m	struct:parameter_entry	access:public
+parameter_entry::Rij_hb	parameters.h	/^  double Rij_hb;		\/* 12-10 Lennard-Jones equilibrium separation *\/$/;"	m	struct:parameter_entry	access:public
+parameter_entry::autogrid_type	parameters.h	/^  char autogrid_type[MAX_LEN_AUTOGRID_TYPE + 1];	\/* autogrid_type is based on babel_types assigned by PyBabel *\/$/;"	m	struct:parameter_entry	access:public
+parameter_entry::bond_index	parameters.h	/^  int bond_index;		\/* used to set up bonds; corresponds to the enum in mdist.h *\/$/;"	m	struct:parameter_entry	access:public
+parameter_entry::epsij	parameters.h	/^  double epsij;			\/* Lennard-Jones energy well-depth *\/$/;"	m	struct:parameter_entry	access:public
+parameter_entry::epsij_hb	parameters.h	/^  double epsij_hb;		\/* 12-10 Lennard-Jones energy well-depth *\/$/;"	m	struct:parameter_entry	access:public
+parameter_entry::hbond	parameters.h	/^  hbond_type hbond;		\/* hbonding character: $/;"	m	struct:parameter_entry	access:public
+parameter_entry::map_index	parameters.h	/^  int map_index;		\/* used to set up map atom_types *\/$/;"	m	struct:parameter_entry	access:public
+parameter_entry::rec_index	parameters.h	/^  int rec_index;		\/* used to set up receptor atom_types *\/$/;"	m	struct:parameter_entry	access:public
+parameter_entry::solpar	parameters.h	/^  double solpar;		\/* solvation parameter *\/$/;"	m	struct:parameter_entry	access:public
+parameter_entry::vol	parameters.h	/^  double vol;			\/* solvation volume *\/$/;"	m	struct:parameter_entry	access:public
+parameter_library	read_parameter_library.cpp	/^static char parameter_library[MAX_CHARS];$/;"	v	file:
+parse_command_line	util.cpp	/^int parse_command_line(char* p, char** argv) {$/;"	f	signature:(char* p, char** argv)
+parse_command_line	util.h	/^extern int parse_command_line( char *, char ** );$/;"	p	signature:( char *, char ** )
+parse_param_line	parse_param_line.cpp	/^int parse_param_line( char line[LINE_LEN] )$/;"	f	signature:( char line[LINE_LEN] )
+parse_param_line	parse_param_line.h	/^int  parse_param_line( char  line[LINE_LEN] );$/;"	p	signature:( char line[LINE_LEN] )
+parsetypes	parsetypes.cpp	/^int parsetypes(char * line, char *words[], int maxwords)$/;"	f	signature:(char * line, char *words[], int maxwords)
+parsetypes	prototypes.h	/^int	    parsetypes(char * line, char *words[], int maxwords);$/;"	p	signature:(char * line, char *words[], int maxwords)
+pdbqfilnam	structs.h	/^  char pdbqfilnam[MAX_CHARS];	\/* PDBQ filename holding these data *\/$/;"	m	struct:group	access:public
+pdfdir	Makefile	/^pdfdir = ${docdir}$/;"	m
+phrtsd	ranlib.h	/^extern void phrtsd(char* phrase,FourByteLong* seed1,FourByteLong* seed2);$/;"	p	signature:(char* phrase,FourByteLong* seed1,FourByteLong* seed2)
+pkgdatadir	Makefile	/^pkgdatadir = $(datadir)\/autogrid$/;"	m
+pkgincludedir	Makefile	/^pkgincludedir = $(includedir)\/autogrid$/;"	m
+pkglibdir	Makefile	/^pkglibdir = $(libdir)\/autogrid$/;"	m
+prHMSfixed	prHMSfixed.cpp	/^void prHMSfixed( float t )$/;"	f	signature:( float t )
+prHMSfixed	prototypes.h	/^void	prHMSfixed( float t );$/;"	p	signature:( float t )
+prefix	Makefile	/^prefix = \/usr\/local$/;"	m
+print_error	main.cpp	/^void print_error( FILE *fileptr, int error_level, char message[LINE_LEN] ) $/;"	f	signature:( FILE *fileptr, int error_level, char message[LINE_LEN] )
+printdate	printdate.cpp	/^void printdate( FILE *fp, int flag )$/;"	f	signature:( FILE *fp, int flag )
+printdate	printdate.h	/^void  printdate( FILE  *fp, int   flag );$/;"	p	signature:( FILE *fp, int flag )
+printdate	prototypes.h	/^void	printdate( FILE *fp, int flag );$/;"	p	signature:( FILE *fp, int flag )
+printhms	printhms.cpp	/^void printhms( Real t )$/;"	f	signature:( Real t )
+printhms	printhms.h	/^void  printhms( Real t );$/;"	p	signature:( Real t )
+printhms	prototypes.h	/^void	printhms( float t );$/;"	p	signature:( float t )
+program_transform_name	Makefile	/^program_transform_name = s,x,x,$/;"	m
+prototypes	configure	/^   function prototypes and stuff, but not '\\xHH' hex character constants.$/;"	f
+psdir	Makefile	/^psdir = ${docdir}$/;"	m
+qmag	structs.h	/^  double qmag;			\/* quaternion's 4-D magnitude *\/$/;"	m	struct:quat	access:public
+qsp_abs_charge	structs.h	/^    double qsp_abs_charge;$/;"	m	struct:chargestruct	access:public
+qsp_abs_charge	structs.h	/^  double    qsp_abs_charge;$/;"	m	struct:atom	access:public
+quat	structs.h	/^typedef struct quat$/;"	s
+quat::ang	structs.h	/^  double ang;			\/* angle of rotation about unit-vector *\/$/;"	m	struct:quat	access:public
+quat::nx	structs.h	/^  double nx;			\/* unit vector's x-component *\/$/;"	m	struct:quat	access:public
+quat::ny	structs.h	/^  double ny;			\/* unit vector's y-component *\/$/;"	m	struct:quat	access:public
+quat::nz	structs.h	/^  double nz;			\/* unit vector's z-component *\/$/;"	m	struct:quat	access:public
+quat::qmag	structs.h	/^  double qmag;			\/* quaternion's 4-D magnitude *\/$/;"	m	struct:quat	access:public
+quat::w	structs.h	/^  double w;			\/* quaternion's w-component *\/$/;"	m	struct:quat	access:public
+quat::x	structs.h	/^  double x;			\/* quaternion's x-component *\/$/;"	m	struct:quat	access:public
+quat::y	structs.h	/^  double y;			\/* quaternion's y-component *\/$/;"	m	struct:quat	access:public
+quat::z	structs.h	/^  double z;			\/* quaternion's z-component *\/$/;"	m	struct:quat	access:public
+r_epsilon_fn	structs.h	/^    Real r_epsilon_fn[NDIEL];                      \/\/ r * distance-dependent dielectric function$/;"	m	struct:energy_tables	access:public
+random_pm	constants.h	346;"	d
+random_pm1	constants.h	343;"	d
+random_range	constants.h	348;"	d
+random_sign	constants.h	342;"	d
+ranf	ranlib.h	/^extern Real ranf(void);$/;"	p	signature:(void)
+rcauchy	ranlib.h	/^extern Real rcauchy(Real, Real);$/;"	p	signature:(Real, Real)
+read_parameter_library	read_parameter_library.cpp	/^void read_parameter_library($/;"	f	signature:( char *FN_parameter_library, int outlev )
+rec_index	parameters.h	/^  int rec_index;		\/* used to set up receptor atom_types *\/$/;"	m	struct:parameter_entry	access:public
+report_parameter_library	read_parameter_library.cpp	/^char * report_parameter_library(){$/;"	f	signature:()
+rm	Tests/test_autogrid4.py	/^def rm( filename ):$/;"	f	access:public
+rotamer	structs.h	/^typedef struct rotamer$/;"	s
+rotamer::ntor	structs.h	/^  int ntor;			\/* number of torsions *\/$/;"	m	struct:rotamer	access:public
+rotamer::tor	structs.h	/^  double tor[MAX_TORS_IN_ROTAMER];	\/* torsion angles in radians *\/$/;"	m	struct:rotamer	access:public
+rotbnd	structs.h	/^  PairID rotbnd;		\/* atom serial-IDs of rotatable bond *\/$/;"	m	struct:torsion	access:public
+round3dp	main.cpp	72;"	d	file:
+round3dp	main.cpp	74;"	d	file:
+run_AutoGrid	Tests/test_autogrid4.py	/^def run_AutoGrid( gpf_filename, glg_filename ):$/;"	f	access:public
+sbindir	Makefile	/^sbindir = ${exec_prefix}\/sbin$/;"	m
+scauchy1	ranlib.h	/^extern Real scauchy1(void);$/;"	p	signature:(void)
+seed_random	constants.h	321;"	d
+seed_random	constants.h	325;"	d
+seed_random	constants.h	331;"	d
+serial	structs.h	/^  int       serial;			        \/* serial ID *\/$/;"	m	struct:atom	access:public
+setUp	Tests/test_autogrid4.py	/^    def setUp(self):$/;"	m	class:AutoGrid_hsg1_sm_minus_two_types_test	access:public
+setUp	Tests/test_autogrid4.py	/^    def setUp(self):$/;"	m	class:AutoGrid_hsg1_sm_no_parameter_library_test	access:public
+setUp	Tests/test_autogrid4.py	/^    def setUp(self):$/;"	m	class:AutoGrid_hsg1_sm_no_receptor_types_test	access:public
+setUp	Tests/test_autogrid4.py	/^    def setUp(self):$/;"	m	class:AutoGrid_hsg1_sm_test	access:public
+setUp	Tests/test_autogrid4.py	/^    def setUp(self):$/;"	m	class:AutoGrid_ligand_types_before_receptor_test	access:public
+setUp	Tests/test_autogrid4.py	/^    def setUp(self):$/;"	m	class:AutoGrid_simple_test	access:public
+setall	ranlib.h	/^extern void setall(FourByteLong iseed1,FourByteLong iseed2);$/;"	p	signature:(FourByteLong iseed1,FourByteLong iseed2)
+setant	ranlib.h	/^extern void setant(FourByteLong qvalue);$/;"	p	signature:(FourByteLong qvalue)
+setflags	prototypes.h	/^int	    setflags( int argc, char **argv );$/;"	p	signature:( int argc, char **argv )
+setflags	setflags.cpp	/^int setflags( int argc, char **argv )$/;"	f	signature:( int argc, char **argv )
+setgmn	ranlib.h	/^extern void setgmn(Real *meanv,Real *covm,FourByteLong p,Real *parm);$/;"	p	signature:(Real *meanv,Real *covm,FourByteLong p,Real *parm)
+setsd	ranlib.h	/^extern void setsd(FourByteLong iseed1,FourByteLong iseed2);$/;"	p	signature:(FourByteLong iseed1,FourByteLong iseed2)
+setup_parameter_library	read_parameter_library.cpp	/^void setup_parameter_library( int outlev, const char * model_text, Unbound_Model unbound_model )$/;"	f	signature:( int outlev, const char * model_text, Unbound_Model unbound_model )
+sexpo	ranlib.h	/^extern Real sexpo(void);$/;"	p	signature:(void)
+sgamma	ranlib.h	/^extern Real sgamma(Real a);$/;"	p	signature:(Real a)
+sharedstatedir	Makefile	/^sharedstatedir = ${prefix}\/com$/;"	m
+shorten_num	convertmap.cpp	/^char shorten_num(double num) $/;"	f	signature:(double num)
+shorten_num	convertmap.cpp	/^char shorten_num(double);$/;"	p	file:	signature:(double)
+snorm	ranlib.h	/^extern Real snorm(void);$/;"	p	signature:(void)
+sol_fn	structs.h	/^    Real sol_fn[NEINT];                            \/\/ distance-dependent desolvation function$/;"	m	struct:energy_tables	access:public
+solpar	parameters.h	/^  double solpar;		\/* solvation parameter *\/$/;"	m	struct:parameter_entry	access:public
+spacing	grid.h	/^    double          spacing; \/\/ uniform grid spacing in Angstroms$/;"	m	struct:grid_map_set_info	access:public
+sq	autogrid.h	76;"	d
+sq	constants.h	270;"	d
+sq_hyp	autogrid.h	78;"	d
+sqhypotenuse	constants.h	272;"	d
+srcdir	Makefile	/^srcdir = .$/;"	m
+state	structs.h	/^typedef struct state$/;"	s
+state::Q	structs.h	/^  Quat Q;			\/* rigid-body orientation *\/$/;"	m	struct:state	access:public
+state::T	structs.h	/^  Coord T;			\/* coordinates of center of molecule *\/$/;"	m	struct:state	access:public
+state::e	structs.h	/^  Energy e;			\/* energy structure *\/$/;"	m	struct:state	access:public
+state::hasEnergy	structs.h	/^  int hasEnergy;		\/* if 0, this state has an undefined energy *\/$/;"	m	struct:state	access:public
+state::ntor	structs.h	/^  int ntor;			\/* number of torsions in molecule *\/$/;"	m	struct:state	access:public
+state::tor	structs.h	/^  double tor[MAX_TORS];		\/* torsion angles in radians *\/$/;"	m	struct:state	access:public
+stderr_desolv	structs.h	/^    double stderr_desolv;             \/\/ Free energy standard error for desolvation term$/;"	m	struct:linear_FE_model	access:public
+stderr_estat	structs.h	/^    double stderr_estat;              \/\/ Free energy standard error for electrostatics term$/;"	m	struct:linear_FE_model	access:public
+stderr_hbond	structs.h	/^    double stderr_hbond;              \/\/ Free energy standard error for H-bonding term$/;"	m	struct:linear_FE_model	access:public
+stderr_tors	structs.h	/^    double stderr_tors;               \/\/ Free energy standard error for torsional term$/;"	m	struct:linear_FE_model	access:public
+stderr_vdW	structs.h	/^    double stderr_vdW;                \/\/ Free energy standard error for van der Waals term$/;"	m	struct:linear_FE_model	access:public
+strindex	prototypes.h	/^int	    strindex( char s[], char t[] );$/;"	p	signature:( char s[], char t[] )
+strindex	strindex.cpp	/^int strindex( char s[], char t[])$/;"	f	signature:( char s[], char t[])
+string_begins_with	read_parameter_library.cpp	/^Boole string_begins_with(char *a, char *b) {$/;"	f	signature:(char *a, char *b)
+string_begins_with	read_parameter_library.cpp	/^Boole string_begins_with(char *a, char *b);$/;"	p	file:	signature:(char *a, char *b)
+string_ends_with	read_parameter_library.cpp	/^Boole string_ends_with(char *a, char *b) {$/;"	f	signature:(char *a, char *b)
+string_ends_with	read_parameter_library.cpp	/^Boole string_ends_with(char *a, char *b);$/;"	p	file:	signature:(char *a, char *b)
+stuff	structs.h	/^  char      stuff[MAX_CHARS];       \/* PDB atom string; formerly "atomstuff" *\/$/;"	m	struct:atom	access:public
+subdir	Makefile	/^subdir = .$/;"	m
+sysconfdir	Makefile	/^sysconfdir = ${prefix}\/etc$/;"	m
+tardir	Makefile	/^	tardir=$(distdir) && $(am__tar) | GZIP=$(GZIP_ENV) gzip -c >$(distdir).tar.gz$/;"	m
+tardir	Makefile	/^	tardir=$(distdir) && $(am__tar) | bzip2 -9 -c >$(distdir).tar.bz2$/;"	m
+tardir	Makefile	/^	tardir=$(distdir) && $(am__tar) | compress -c >$(distdir).tar.Z$/;"	m
+target_alias	Makefile	/^target_alias = $/;"	m
+tearDown	Tests/test_autogrid4.py	/^    def tearDown(self):$/;"	m	class:AutoGrid_hsg1_sm_test	access:public
+test_glg_exists	Tests/test_autogrid4.py	/^    def test_glg_exists(self):$/;"	m	class:AutoGrid_simple_test	access:public
+test_hsg1_A	Tests/test_autogrid4.py	/^    def test_hsg1_A(self):$/;"	m	class:AutoGrid_hsg1_sm_test	access:public
+test_hsg1_C	Tests/test_autogrid4.py	/^    def test_hsg1_C(self):$/;"	m	class:AutoGrid_hsg1_sm_test	access:public
+test_hsg1_HD	Tests/test_autogrid4.py	/^    def test_hsg1_HD(self):$/;"	m	class:AutoGrid_hsg1_sm_test	access:public
+test_hsg1_N	Tests/test_autogrid4.py	/^    def test_hsg1_N(self):$/;"	m	class:AutoGrid_hsg1_sm_test	access:public
+test_hsg1_NA	Tests/test_autogrid4.py	/^    def test_hsg1_NA(self):$/;"	m	class:AutoGrid_hsg1_sm_test	access:public
+test_hsg1_OA	Tests/test_autogrid4.py	/^    def test_hsg1_OA(self):$/;"	m	class:AutoGrid_hsg1_sm_test	access:public
+test_hsg1_dsolv	Tests/test_autogrid4.py	/^    def test_hsg1_dsolv(self):$/;"	m	class:AutoGrid_hsg1_sm_test	access:public
+test_hsg1_estat	Tests/test_autogrid4.py	/^    def test_hsg1_estat(self):$/;"	m	class:AutoGrid_hsg1_sm_test	access:public
+times	times.h	/^extern clock_t times (struct tms *buffer);$/;"	p	signature:(struct tms *buffer)
+times	times2.cpp	/^clock_t times (struct tms *buffer)$/;"	f	signature:(struct tms *buffer)
+timesys	prototypes.h	/^void	timesys( Clock duration, struct tms *start, struct tms *end );$/;"	p	signature:( Clock duration, struct tms *start, struct tms *end )
+timesys	timesys.cpp	/^void timesys( Clock       duration,$/;"	f	signature:( Clock duration, struct tms *start, struct tms *end)
+timesys	timesys.h	/^void  timesys( Clock  duration,$/;"	p	signature:( Clock duration, struct tms *start, struct tms *end )
+timesyshms	prototypes.h	/^void	timesyshms( Clock duration, struct tms *start, struct tms *end );$/;"	p	signature:( Clock duration, struct tms *start, struct tms *end )
+timesyshms	timesyshms.cpp	/^void timesyshms( Clock     duration,$/;"	f	signature:( Clock duration, struct tms *start, struct tms *end)
+timesyshms	timesyshms.h	/^void  timesyshms( Clock  duration,$/;"	p	signature:( Clock duration, struct tms *start, struct tms *end )
+tlist	structs.h	/^  int               tlist[MAX_TORS][MAX_ATOMS];	    \/* torsion list of movable atoms *\/$/;"	m	struct:molecule	access:public
+tms	times.h	/^struct tms$/;"	s
+tms::tms_cstime	times.h	/^	clock_t tms_cstime;	\/\/ similar to tms_cutime, but represents the total CPU time used by the system on behalf of all the terminated child processes of the calling process. $/;"	m	struct:tms	access:public
+tms::tms_cutime	times.h	/^	clock_t tms_cutime;	\/\/ sum of the tms_utime values and the tms_cutime values of all terminated child processes of the calling process, whose status has been reported to the parent process by wait or waitpid; see section Process Completion. In other words, it represents the total CPU time used in executing the instructions of all the terminated child processes of the calling process, excluding child processes which have not yet been reported by wait or waitpid. $/;"	m	struct:tms	access:public
+tms::tms_stime	times.h	/^	clock_t tms_stime;	\/\/ CPU time used by the system on behalf of the calling process. $/;"	m	struct:tms	access:public
+tms::tms_utime	times.h	/^	clock_t tms_utime;	\/\/ CPU time used in executing the instructions of the calling process. $/;"	m	struct:tms	access:public
+tms_cstime	times.h	/^	clock_t tms_cstime;	\/\/ similar to tms_cutime, but represents the total CPU time used by the system on behalf of all the terminated child processes of the calling process. $/;"	m	struct:tms	access:public
+tms_cutime	times.h	/^	clock_t tms_cutime;	\/\/ sum of the tms_utime values and the tms_cutime values of all terminated child processes of the calling process, whose status has been reported to the parent process by wait or waitpid; see section Process Completion. In other words, it represents the total CPU time used in executing the instructions of all the terminated child processes of the calling process, excluding child processes which have not yet been reported by wait or waitpid. $/;"	m	struct:tms	access:public
+tms_stime	times.h	/^	clock_t tms_stime;	\/\/ CPU time used by the system on behalf of the calling process. $/;"	m	struct:tms	access:public
+tms_utime	times.h	/^	clock_t tms_utime;	\/\/ CPU time used in executing the instructions of the calling process. $/;"	m	struct:tms	access:public
+top_builddir	Makefile	/^top_builddir = .$/;"	m
+top_distdir	Makefile	/^top_distdir = $(distdir)$/;"	m
+top_srcdir	Makefile	/^top_srcdir = .$/;"	m
+tor	structs.h	/^  double tor[MAX_TORS];		\/* torsion angles in radians *\/$/;"	m	struct:state	access:public
+tor	structs.h	/^  double tor[MAX_TORS_IN_ROTAMER];	\/* torsion angles in radians *\/$/;"	m	struct:rotamer	access:public
+tors	structs.h	/^  Torsion tors[MAX_TORS];	\/* Torsion data *\/$/;"	m	struct:group	access:public
+torsion	structs.h	/^typedef struct torsion$/;"	s
+torsion::IDmove	structs.h	/^  int IDmove[MAX_ATOMS];	\/* atom serial-IDs of atoms moved by this *\/$/;"	m	struct:torsion	access:public
+torsion::nmoved	structs.h	/^  int nmoved;			\/* number of atoms moved by this *\/$/;"	m	struct:torsion	access:public
+torsion::rotbnd	structs.h	/^  PairID rotbnd;		\/* atom serial-IDs of rotatable bond *\/$/;"	m	struct:torsion	access:public
+torsion::vt	structs.h	/^  Coord vt;			\/* bond-vector of rotatable bond *\/$/;"	m	struct:torsion	access:public
+total	structs.h	/^  double total;			\/* total energy *\/$/;"	m	struct:energy	access:public
+transform	Makefile	/^transform = $(program_transform_name)$/;"	m
+type	structs.h	/^  int       type;			        \/* atom type as integer *\/$/;"	m	struct:atom	access:public
+type_string	structs.h	/^  char      type_string[MAX_CHARS]; \/* atom type as string *\/$/;"	m	struct:atom	access:public
+upper	structs.h	/^  double upper;			\/* upper bound on distance *\/$/;"	m	struct:dist_constraint	access:public
+usage	Tests/test_autogrid4.py	/^def usage():$/;"	f	access:public
+vec	typedefs.h	/^	vector float vec;$/;"	m	union:__anon1
+vol	parameters.h	/^  double vol;			\/* solvation volume *\/$/;"	m	struct:parameter_entry	access:public
+vt	structs.h	/^  Coord vt;			\/* bond-vector of rotatable bond *\/$/;"	m	struct:torsion	access:public
+vt	structs.h	/^  Real     vt[MAX_TORS][SPACE];        	\/* vectors  of torsions *\/$/;"	m	struct:molecule	access:public
+w	structs.h	/^  double w;			\/* quaternion's w-component *\/$/;"	m	struct:quat	access:public
+x	structs.h	/^  double x;			\/* Cartesian x-coordinate *\/$/;"	m	struct:coord	access:public
+x	structs.h	/^  double x;			\/* quaternion's x-component *\/$/;"	m	struct:quat	access:public
+y	structs.h	/^  double y;			\/* Cartesian y-coordinate *\/$/;"	m	struct:coord	access:public
+y	structs.h	/^  double y;			\/* quaternion's y-component *\/$/;"	m	struct:quat	access:public
+z	structs.h	/^  double z;			\/* Cartesian z-coordinate *\/$/;"	m	struct:coord	access:public
+z	structs.h	/^  double z;			\/* quaternion's z-component *\/$/;"	m	struct:quat	access:public
