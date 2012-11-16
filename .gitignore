@@ -1,0 +1,16 @@
+autodock/Makefile
+autodock/autom4te.cache/
+autodock/*.o
+
+autodock/config.log
+autodock/config.status
+autodock/libad.a
+
+autogrid/Makefile
+autogrid/*.o
+autogrid/autom4te.cache/
+
+autogrid/config.log
+autogrid/config.status
+autogrid/default_parameters.h
+autogrid/read_parameter_library.cpp
