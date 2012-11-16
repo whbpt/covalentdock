@@ -1,0 +1,52 @@
+#! /bin/bash
+# $Id: mkdisttars,v 1.5 2010/01/27 00:50:46 mp Exp $
+# Usage example:
+# 
+#cd /mgl/works/rhuey/autodocksuite_4.2.2.1
+#/mgl/works/rhuey/autodock_1/autodock/mkdisttars
+
+archlist="i86Cygwin i86Linux2 sun4SunOS5 ia64Linux2 universalDarwin8 universalDarwin9 universalDarwin10"
+version=4
+release=4.2.3
+umask 0
+
+# name for "arch" tar files is 
+# "autodocksuite-$release-<arch>.tar.gz"
+#
+# content for "arch" tar files is 
+# simply "<arch>/autodock4 <arch>/autogrid4"
+for arch in $archlist; do
+   archok=y
+   case $arch in 
+    i86Cygwin) exeext=.exe ;;
+    *) exeext="";;
+    esac
+    for prog in autodock autogrid; do
+    progfile=${prog}${version}  # eg autodock4
+      archprogfile=$prog/$arch/$progfile$exeext
+      if [ ! -e $archprogfile ] ; then
+        echo $archprogfile missing
+	archok=n
+      else
+        ls -l $archprogfile
+      fi
+   done
+   if [ test$archok != testn ] ; then
+     tar cvf \
+     autodocksuite-${release}-$arch.tar \
+     -C autodock $arch/autodock4$exeext \
+     -C ../autogrid $arch/autogrid4$exeext 
+   gzip  autodocksuite-${release}-$arch.tar
+   fi
+done
+
+
+# name for "src" tar file is 
+# "autodocksuite-${release}-src-tar.gz"
+# content for "src" tar file is 
+#   "autodocksuite-${release}/src/auto{grid,dock}-${release}/"
+#   with all *.cc *.h *.cpp README COPYING, ... Tests
+#   (checked out from CVS then "autoreconf -i" run, so 
+#     includes 'configure' but not Makefile)
+tar cf autodocksuite-${release}-src.tar src
+gzip autodocksuite-${release}-src.tar
