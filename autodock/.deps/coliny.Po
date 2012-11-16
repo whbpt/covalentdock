@@ -1,1 +1,0 @@
-coliny.o coliny.o: coliny.cc

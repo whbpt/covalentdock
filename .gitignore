@@ -14,3 +14,9 @@ autogrid/config.log
 autogrid/config.status
 autogrid/default_parameters.h
 autogrid/read_parameter_library.cpp
+
+autogrid/.deps/
+autodock/.deps/
+
+autodock/covalentDock
+autogrid/covalentGrid
