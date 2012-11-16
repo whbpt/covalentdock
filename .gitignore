@@ -4,6 +4,7 @@ autodock/*.o
 
 autodock/config.log
 autodock/config.status
+autodock/default_parameters.h
 autodock/libad.a
 
 autogrid/Makefile
