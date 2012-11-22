@@ -139,6 +139,17 @@ int gpfparser( char line[LINE_LEN] )
         token = GPF_PARAM_FILE;
 
     }
+
+	// CovalentDock
+	else if (equal(c,"anchor",6))
+	{
+		token=GPF_ANCHOR;
+	}
+	else if (equal(c,"link",4))
+	{
+		token=GPF_LINK;
+	}
+
     return(token);
 }
 /* EOF */

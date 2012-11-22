@@ -149,6 +149,7 @@ FourByteLong	structs.h	/^typedef int FourByteLong;$/;"	t
 FourByteLong	structs.h	/^typedef long FourByteLong;$/;"	t
 FourByteLong	typedefs.h	/^    typedef int  FourByteLong;$/;"	t
 FourByteLong	typedefs.h	/^    typedef long FourByteLong;$/;"	t
+GPF_ANCHOR	gpftoken.h	52;"	d
 GPF_COMMENT	gpftoken.h	28;"	d
 GPF_CONSTANT	gpftoken.h	44;"	d
 GPF_COVALENTMAP	gpftoken.h	45;"	d
@@ -160,6 +161,7 @@ GPF_FMAP	gpftoken.h	40;"	d
 GPF_GRIDCENTER	gpftoken.h	33;"	d
 GPF_GRIDFLD	gpftoken.h	30;"	d
 GPF_LIGAND_TYPES	gpftoken.h	34;"	d
+GPF_LINK	gpftoken.h	53;"	d
 GPF_MAP	gpftoken.h	35;"	d
 GPF_NBP_COEFFS	gpftoken.h	36;"	d
 GPF_NBP_R_EPS	gpftoken.h	37;"	d
@@ -185,7 +187,7 @@ HI_NRG_JUMP_FACTOR	constants.h	138;"	d
 I	parm.h	73;"	d
 IDmove	structs.h	/^  int IDmove[MAX_ATOMS];	\/* atom serial-IDs of atoms moved by this *\/$/;"	m	struct:torsion	access:public
 INFORMATION	main.cpp	83;"	d	file:
-INIT_NUM_GRID_PTS	main.cpp	417;"	d	file:
+INIT_NUM_GRID_PTS	main.cpp	422;"	d	file:
 INSTALL	Makefile	/^INSTALL = \/usr\/bin\/install -c$/;"	m
 INSTALL_DATA	Makefile	/^INSTALL_DATA = ${INSTALL} -m 644$/;"	m
 INSTALL_HEADER	Makefile	/^INSTALL_HEADER = $(INSTALL_DATA)$/;"	m
@@ -214,6 +216,7 @@ Li	parm.h	75;"	d
 Linear_FE_Model	structs.h	/^} Linear_FE_Model;$/;"	t	typeref:struct:linear_FE_model
 MACROS	constants.h	241;"	d
 MAKEINFO	Makefile	/^MAKEINFO = ${SHELL} \/home\/xouyang1\/B-bond\/autodock\/googlecode\/covalentdock\/autogrid\/missing --run makeinfo$/;"	m
+MAXCOV	main.cpp	296;"	d	file:
 MAXKEY	atom_parameter_manager.cpp	27;"	d	file:
 MAX_ATOMS	constants.h	102;"	d
 MAX_ATOMS	constants.h	97;"	d

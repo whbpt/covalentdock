@@ -149,6 +149,20 @@ FILE *ad_fopen(const char *path, const char *mode)
 
 static int get_rec_index(const char key[]);
 
+/*-----------------------------CovalentDock-----------------------------*/
+int getCovIndex(char now[3], char (*all)[3], int total)
+{
+	for (int i=0;i<total;i++)
+	{
+		if (now[0]==all[i][0] && now[1]==all[i][1])
+		{
+			return i;
+		}
+	}
+	return -1;
+}
+/*-----------------------------CovalentDock-----------------------------*/
+
 
 int main( int argc,  char **argv )
 
@@ -288,10 +302,35 @@ hbond_type hbond[AG_MAX_ATOMS];
 int disorder[AG_MAX_ATOMS];
 int rexp[AG_MAX_ATOMS];
 double coord[AG_MAX_ATOMS][XYZ];
-//OUYANG XUCHANG
-int COV_NEIB[AG_MAX_ATOMS];
 double rvector[AG_MAX_ATOMS][XYZ];
 double rvector2[AG_MAX_ATOMS][XYZ];
+
+
+
+/*-----------------------------CovalentDock-----------------------------*/
+int COV_NEIB[AG_MAX_ATOMS];
+
+int COV_ANCR_COUNT=0;
+int COV_LINK_COUNT=0;
+
+#define MAXCOV 10
+// COMCOV=MAXCOV*MAXCOV
+#define COMCOV 100
+char COV_ANCR[MAXCOV][3]; // anchor name
+char ORI_ANCR[MAXCOV][3]; // mapping from anchor to original atom when no covalent bonding
+
+char COV_LINK[MAXCOV][3]; // link name
+char ORI_LINK[MAXCOV][3]; // mapping from link to original atom when no covalent bonding
+
+double COV_D      [COMCOV]; // parameters for covalent bonding
+double COV_r0     [COMCOV]; // COMCOV=MAXCOV*MAXCOV
+double COV_alpha  [COMCOV]; // there's one-to-one mapping from anchor-link pair to parameters
+double COV_entropy[COMCOV]; // anchor-i and link-j will be mapped to COV_[i*MAXCOV+j]
+double COV_C      [COMCOV];
+double COV_theta  [COMCOV];
+/*-----------------------------CovalentDock-----------------------------*/
+
+
 
 /*canned atom type number*/
 int hydrogen, carbon, arom_carbon, oxygen, nitrogen; 
@@ -619,6 +658,65 @@ while( fgets( GPF_line, LINE_LEN, GPF ) != NULL ) {
     /* This second switch interprets the current GPF line. */
 
     switch( GPF_keyword ) {
+	
+/******************************************************************************/
+
+
+
+/*-----------------------------CovalentDock-----------------------------*/
+	case GPF_ANCHOR:
+        //(void) fprintf( logFile, "%s", GPF_line);
+		if (COV_ANCR_COUNT>=MAXCOV)
+		{
+            (void) sprintf( message, "Too many covalent anchor atoms.\n");
+            print_error( logFile, ERROR, message );
+            print_error( logFile, FATAL_ERROR, "Unsuccessful completion.\n\n" );
+		}
+        (void) sscanf( GPF_line, "%*s %2s %2s",COV_ANCR[COV_ANCR_COUNT],ORI_ANCR[COV_ANCR_COUNT]);
+        (void) fprintf( logFile, "\nNew covalent anchor detected: %s, which normally looks like a %s\n\n", COV_ANCR[COV_ANCR_COUNT],ORI_ANCR[COV_ANCR_COUNT]);
+		COV_ANCR_COUNT++;
+		break;
+	case GPF_LINK:
+		if (COV_ANCR_COUNT>=MAXCOV)
+		{
+            (void) sprintf( message, "Too many covalent link atoms.\n");
+            print_error( logFile, ERROR, message );
+            print_error( logFile, FATAL_ERROR, "Unsuccessful completion.\n\n" );
+		}
+		double d,r,a,e,c,t;
+		char anchor[3];
+		(void) sscanf( GPF_line, "%*s %2s %2s %2s %lf %lf %lf %lf %lf %lf",COV_LINK[COV_LINK_COUNT],ORI_LINK[COV_LINK_COUNT],anchor,&d,&r,&a,&e,&c,&t);
+		int acrIndex;
+		acrIndex=getCovIndex(anchor,COV_ANCR,COV_ANCR_COUNT);
+		if (acrIndex==-1)
+		{
+			(void) sprintf( message, "There's no covalent anchor atoms named %2s.\nNote that anchors must come before any atom can link to it.\n",anchor);
+	           print_error( logFile, ERROR, message );
+	        print_error( logFile, FATAL_ERROR, "Unsuccessful completion.\n\n" );
+		}
+		int seq;
+		seq=acrIndex*MAXCOV+COV_LINK_COUNT;
+		COV_D[seq]=d;
+		COV_r0[seq]=r;
+		COV_alpha[seq]=a;
+		COV_entropy[seq]=e;
+		COV_C[seq]=c;
+		COV_theta[seq]=t;
+		(void) fprintf( logFile, "\nNew covalent link detected: %2s, which normally looks like a %2s\nlink %2s is attached to anchor %2s.\n\n",
+				COV_LINK[COV_LINK_COUNT],ORI_LINK[COV_LINK_COUNT],COV_LINK[COV_LINK_COUNT],COV_ANCR[acrIndex]);
+		(void) fprintf( logFile, "Parameters for %2s - %2s covalent bonding pair are:\n",COV_LINK[COV_LINK_COUNT],COV_ANCR[acrIndex]);
+		(void) fprintf( logFile, "Bond dissociation Energy:  %7.3lf\n",COV_D[seq]);
+		(void) fprintf( logFile, "Equilibrium bond length:   %7.3lf\n",COV_r0[seq]);
+		(void) fprintf( logFile, "Potential width parameter: %7.3lf\n",COV_alpha[seq]);
+		(void) fprintf( logFile, "Contribution from entropy: %7.3lf\n",COV_entropy[seq]);
+		(void) fprintf( logFile, "Empirical correction:      %7.3lf\n",COV_C[seq]);
+		(void) fprintf( logFile, "Optimal angle theta:       %7.3lf\n\n",COV_theta[seq]);
+
+		COV_LINK_COUNT++;
+		break;
+/*-----------------------------CovalentDock-----------------------------*/
+
+
 
 /******************************************************************************/
 

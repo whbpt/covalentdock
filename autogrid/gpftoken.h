@@ -47,3 +47,7 @@ Copyright (C) 2009 The Scripps Research Institute. All rights reserved.
 #define GPF_PARAM_FILE	21
 #define GPF_DSOLVMAP	22
 #define GPF_QASP	23
+
+//CovalentDock
+#define GPF_ANCHOR 51
+#define GPF_LINK 52
