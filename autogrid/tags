@@ -7,18 +7,20 @@
 A1	parameters.h	/^{ NON, DS, D1, AS, A1, A2 };	\/* hbonding character: *\/$/;"	e	enum:hbond_type
 A2	parameters.h	/^{ NON, DS, D1, AS, A1, A2 };	\/* hbonding character: *\/$/;"	e	enum:hbond_type
 ACCEPT	constants.h	67;"	d
-ACLOCAL	Makefile	/^ACLOCAL = ${SHELL} \/home\/xouyang1\/B-bond\/autodock\/src\/autogrid\/missing --run aclocal-1.10$/;"	m
+ACLOCAL	Makefile	/^ACLOCAL = ${SHELL} \/home\/xouyang1\/B-bond\/autodock\/googlecode\/covalentdock\/autogrid\/missing --run aclocal-1.9$/;"	m
 ACLOCAL_M4	Makefile	/^ACLOCAL_M4 = $(top_srcdir)\/aclocal.m4$/;"	m
 AG_MAX_ATOMS	autogrid.h	58;"	d
-AMTAR	Makefile	/^AMTAR = ${SHELL} \/home\/xouyang1\/B-bond\/autodock\/src\/autogrid\/missing --run tar$/;"	m
+AMDEP_FALSE	Makefile	/^AMDEP_FALSE = #$/;"	m
+AMDEP_TRUE	Makefile	/^AMDEP_TRUE = $/;"	m
+AMTAR	Makefile	/^AMTAR = ${SHELL} \/home\/xouyang1\/B-bond\/autodock\/googlecode\/covalentdock\/autogrid\/missing --run tar$/;"	m
 AM_CFLAGS	Makefile	/^AM_CFLAGS = -Wall -O3 # All warnings, Agressive optimization$/;"	m
 AM_CPPFLAGS	Makefile	/^AM_CPPFLAGS = -Wall -O3 -I$(srcdir)\/..\/autodock -Wno-write-strings # \\$/;"	m
 AS	parameters.h	/^{ NON, DS, D1, AS, A1, A2 };	\/* hbonding character: *\/$/;"	e	enum:hbond_type
 ATM1	constants.h	185;"	d
 ATM2	constants.h	186;"	d
-AUTOCONF	Makefile	/^AUTOCONF = ${SHELL} \/home\/xouyang1\/B-bond\/autodock\/src\/autogrid\/missing --run autoconf$/;"	m
-AUTOHEADER	Makefile	/^AUTOHEADER = ${SHELL} \/home\/xouyang1\/B-bond\/autodock\/src\/autogrid\/missing --run autoheader$/;"	m
-AUTOMAKE	Makefile	/^AUTOMAKE = ${SHELL} \/home\/xouyang1\/B-bond\/autodock\/src\/autogrid\/missing --run automake-1.10$/;"	m
+AUTOCONF	Makefile	/^AUTOCONF = ${SHELL} \/home\/xouyang1\/B-bond\/autodock\/googlecode\/covalentdock\/autogrid\/missing --run autoconf$/;"	m
+AUTOHEADER	Makefile	/^AUTOHEADER = ${SHELL} \/home\/xouyang1\/B-bond\/autodock\/googlecode\/covalentdock\/autogrid\/missing --run autoheader$/;"	m
+AUTOMAKE	Makefile	/^AUTOMAKE = ${SHELL} \/home\/xouyang1\/B-bond\/autodock\/googlecode\/covalentdock\/autogrid\/missing --run automake-1.9$/;"	m
 AWK	Makefile	/^AWK = gawk$/;"	m
 A_DIV	constants.h	147;"	d
 A_DIV	constants.h	159;"	d
@@ -103,14 +105,14 @@ Cpl	parm.h	31;"	d
 Cu	parm.h	69;"	d
 D1	parameters.h	/^{ NON, DS, D1, AS, A1, A2 };	\/* hbonding character: *\/$/;"	e	enum:hbond_type
 DEBUG_STUFF	constants.h	358;"	d
-DEFAULT_INCLUDES	Makefile	/^DEFAULT_INCLUDES = -I.$/;"	m
+DEFAULT_INCLUDES	Makefile	/^DEFAULT_INCLUDES = -I. -I$(srcdir)$/;"	m
 DEFHWDTH	constants.h	127;"	d
-DEFS	Makefile	/^DEFS = -DPACKAGE_NAME=\\"autogrid\\" -DPACKAGE_TARNAME=\\"autogrid\\" -DPACKAGE_VERSION=\\"4.2.3\\" -DPACKAGE_STRING=\\"autogrid\\ 4.2.3\\" -DPACKAGE_BUGREPORT=\\"autodock@scripps.edu\\" -DPACKAGE=\\"autogrid\\" -DVERSION=\\"4.2.3\\" -DHAVE_LIBM=1 -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE__BOOL=1 -DHAVE_STDBOOL_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MALLOC=1 -DHAVE_GETHOSTNAME=1 -DHAVE_POW=1 -DHAVE_ROUND=1 -DHAVE_SQRT=1 -DHAVE_STRNCASECMP=1$/;"	m
+DEFS	Makefile	/^DEFS = -DPACKAGE_NAME=\\"covgrid\\" -DPACKAGE_TARNAME=\\"covgrid\\" -DPACKAGE_VERSION=\\"0.2\\" -DPACKAGE_STRING=\\"covgrid\\ 0.2\\" -DPACKAGE_BUGREPORT=\\"xouyang1@ntu.edu.sg\\" -DPACKAGE=\\"covgrid\\" -DVERSION=\\"0.2\\" -DHAVE_LIBM=1 -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE__BOOL=1 -DHAVE_STDBOOL_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MALLOC=1 -DHAVE_GETHOSTNAME=1 -DHAVE_POW=1 -DHAVE_ROUND=1 -DHAVE_SQRT=1 -DHAVE_STRNCASECMP=1 $/;"	m
 DEPDIR	Makefile	/^DEPDIR = .deps$/;"	m
 DISTFILES	Makefile	/^DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)$/;"	m
 DIST_ARCHIVES	Makefile	/^DIST_ARCHIVES = $(distdir).tar.gz$/;"	m
 DIST_COMMON	Makefile	/^DIST_COMMON = README $(am__configure_deps) $(srcdir)\/Makefile.am \\$/;"	m
-DIST_SOURCES	Makefile	/^DIST_SOURCES = $(autogrid4_SOURCES)$/;"	m
+DIST_SOURCES	Makefile	/^DIST_SOURCES = $(covalentGrid_SOURCES)$/;"	m
 DPrint	constants.h	374;"	d
 DS	parameters.h	/^{ NON, DS, D1, AS, A1, A2 };	\/* hbonding character: *\/$/;"	e	enum:hbond_type
 Deg	constants.h	250;"	d
@@ -119,7 +121,7 @@ Div2Rad	constants.h	124;"	d
 ECHO_C	Makefile	/^ECHO_C = $/;"	m
 ECHO_N	Makefile	/^ECHO_N = -n$/;"	m
 ECHO_T	Makefile	/^ECHO_T = $/;"	m
-EGREP	Makefile	/^EGREP = \/bin\/grep -E$/;"	m
+EGREP	Makefile	/^EGREP = grep -E$/;"	m
 ENERGY_CUTOFF	constants.h	136;"	d
 EPSIJ_MAX	constants.h	208;"	d
 EPSIJ_MIN	constants.h	207;"	d
@@ -170,7 +172,6 @@ GPF_RECEPTOR_TYPES	gpftoken.h	46;"	d
 GPF_SMOOTH	gpftoken.h	42;"	d
 GPF_SOL_PAR	gpftoken.h	43;"	d
 GPF_SPACING	gpftoken.h	32;"	d
-GREP	Makefile	/^GREP = \/bin\/grep$/;"	m
 GRID_MACROS	grid.h	28;"	d
 GZIP_ENV	Makefile	/^GZIP_ENV = --best$/;"	m
 Ge	parm.h	72;"	d
@@ -190,7 +191,7 @@ INSTALL_DATA	Makefile	/^INSTALL_DATA = ${INSTALL} -m 644$/;"	m
 INSTALL_HEADER	Makefile	/^INSTALL_HEADER = $(INSTALL_DATA)$/;"	m
 INSTALL_PROGRAM	Makefile	/^INSTALL_PROGRAM = ${INSTALL}$/;"	m
 INSTALL_SCRIPT	Makefile	/^INSTALL_SCRIPT = ${INSTALL}$/;"	m
-INSTALL_STRIP_PROGRAM	Makefile	/^INSTALL_STRIP_PROGRAM = $(install_sh) -c -s$/;"	m
+INSTALL_STRIP_PROGRAM	Makefile	/^INSTALL_STRIP_PROGRAM = ${SHELL} $(install_sh) -c -s$/;"	m
 INT_SQA_DIV	constants.h	150;"	d
 INT_SQA_DIV	constants.h	162;"	d
 INV_A_DIV	constants.h	148;"	d
@@ -212,7 +213,7 @@ LTLIBOBJS	Makefile	/^LTLIBOBJS = $/;"	m
 Li	parm.h	75;"	d
 Linear_FE_Model	structs.h	/^} Linear_FE_Model;$/;"	t	typeref:struct:linear_FE_model
 MACROS	constants.h	241;"	d
-MAKEINFO	Makefile	/^MAKEINFO = ${SHELL} \/home\/xouyang1\/B-bond\/autodock\/src\/autogrid\/missing --run makeinfo$/;"	m
+MAKEINFO	Makefile	/^MAKEINFO = ${SHELL} \/home\/xouyang1\/B-bond\/autodock\/googlecode\/covalentdock\/autogrid\/missing --run makeinfo$/;"	m
 MAXKEY	atom_parameter_manager.cpp	27;"	d	file:
 MAX_ATOMS	constants.h	102;"	d
 MAX_ATOMS	constants.h	97;"	d
@@ -232,7 +233,6 @@ MAX_TORS	constants.h	108;"	d
 MAX_TORS_IN_ROTAMER	constants.h	109;"	d
 MAX_TOR_CON	constants.h	110;"	d
 MAX_TREES	constants.h	107;"	d
-MKDIR_P	Makefile	/^MKDIR_P = \/bin\/mkdir -p$/;"	m
 Mg	parm.h	76;"	d
 Mn	parm.h	77;"	d
 ModDeg	constants.h	252;"	d
@@ -289,12 +289,12 @@ OUTLEV2_GENS	constants.h	231;"	d
 OUTNUMCLUST	constants.h	213;"	d
 Om	parm.h	43;"	d
 P3	parm.h	55;"	d
-PACKAGE	Makefile	/^PACKAGE = autogrid$/;"	m
-PACKAGE_BUGREPORT	Makefile	/^PACKAGE_BUGREPORT = autodock@scripps.edu$/;"	m
-PACKAGE_NAME	Makefile	/^PACKAGE_NAME = autogrid$/;"	m
-PACKAGE_STRING	Makefile	/^PACKAGE_STRING = autogrid 4.2.3$/;"	m
-PACKAGE_TARNAME	Makefile	/^PACKAGE_TARNAME = autogrid$/;"	m
-PACKAGE_VERSION	Makefile	/^PACKAGE_VERSION = 4.2.3$/;"	m
+PACKAGE	Makefile	/^PACKAGE = covgrid$/;"	m
+PACKAGE_BUGREPORT	Makefile	/^PACKAGE_BUGREPORT = xouyang1@ntu.edu.sg$/;"	m
+PACKAGE_NAME	Makefile	/^PACKAGE_NAME = covgrid$/;"	m
+PACKAGE_STRING	Makefile	/^PACKAGE_STRING = covgrid 0.2$/;"	m
+PACKAGE_TARNAME	Makefile	/^PACKAGE_TARNAME = covgrid$/;"	m
+PACKAGE_VERSION	Makefile	/^PACKAGE_VERSION = 0.2$/;"	m
 PARSE_PAR_LINE	parse_param_line.h	28;"	d
 PAR_	partokens.h	48;"	d
 PAR_ATOM_PAR	partokens.h	55;"	d
@@ -352,7 +352,7 @@ S3	parm.h	46;"	d
 S3pl	parm.h	45;"	d
 SET_MAKE	Makefile	/^SET_MAKE = $/;"	m
 SHELL	Makefile	/^SHELL = \/bin\/sh$/;"	m
-SOURCES	Makefile	/^SOURCES = $(autogrid4_SOURCES)$/;"	m
+SOURCES	Makefile	/^SOURCES = $(covalentGrid_SOURCES)$/;"	m
 SPHERICAL	autogrid.h	64;"	d
 SQ	constants.h	271;"	d
 SQA_DIV	constants.h	149;"	d
@@ -382,9 +382,11 @@ UnsignedFourByteLong	structs.h	/^typedef unsigned long UnsignedFourByteLong;$/;"
 UnsignedFourByteLong	typedefs.h	/^    typedef unsigned int UnsignedFourByteLong;$/;"	t
 UnsignedFourByteLong	typedefs.h	/^    typedef unsigned long UnsignedFourByteLong;$/;"	t
 V	constants.h	70;"	d
-VERSION	Makefile	/^VERSION = 4.2.3$/;"	m
+VERSION	Makefile	/^VERSION = 0.2$/;"	m
 Vector	structs.h	/^typedef double Vector [3];  \/\/ for vectors and points$/;"	t
 W	constants.h	71;"	d
+WANT_BIGSTACK_FALSE	Makefile	/^WANT_BIGSTACK_FALSE = $/;"	m
+WANT_BIGSTACK_TRUE	Makefile	/^WANT_BIGSTACK_TRUE = #$/;"	m
 WARNING	main.cpp	82;"	d	file:
 WORDLEN	constants.h	92;"	d
 WinMain	main.cpp	/^int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInst,$/;"	f	signature:(HINSTANCE hInst, HINSTANCE hPrevInst, LPSTR Args, int WinMode)
@@ -403,14 +405,11 @@ _STRUCTS_H	structs.h	28;"	d
 _TYPEDEFS_H	typedefs.h	28;"	d
 __anon1::elements	typedefs.h	/^	float		 elements[4];$/;"	m	union:__anon1
 __anon1::vec	typedefs.h	/^	vector float vec;$/;"	m	union:__anon1
-abs_builddir	Makefile	/^abs_builddir = \/home\/xouyang1\/B-bond\/autodock\/src\/autogrid$/;"	m
 abs_charge	structs.h	/^    double abs_charge;$/;"	m	struct:chargestruct	access:public
 abs_charge	structs.h	/^  double    abs_charge;$/;"	m	struct:atom	access:public
-abs_srcdir	Makefile	/^abs_srcdir = \/home\/xouyang1\/B-bond\/autodock\/src\/autogrid$/;"	m
-abs_top_builddir	Makefile	/^abs_top_builddir = \/home\/xouyang1\/B-bond\/autodock\/src\/autogrid$/;"	m
-abs_top_srcdir	Makefile	/^abs_top_srcdir = \/home\/xouyang1\/B-bond\/autodock\/src\/autogrid$/;"	m
 ac_ct_CC	Makefile	/^ac_ct_CC = gcc$/;"	m
 ac_ct_CXX	Makefile	/^ac_ct_CXX = g++$/;"	m
+ac_ct_STRIP	Makefile	/^ac_ct_STRIP = $/;"	m
 ad_fopen	autogrid.h	/^FILE *ad_fopen(const char *path, const char *mode);$/;"	p	signature:(const char *path, const char *mode)
 ad_fopen	main.cpp	/^FILE *ad_fopen(const char *path, const char *mode)$/;"	f	signature:(const char *path, const char *mode)
 advnst	ranlib.h	/^extern void advnst(FourByteLong k);$/;"	p	signature:(FourByteLong k)
@@ -419,6 +418,10 @@ am__aclocal_m4_deps	Makefile	/^am__aclocal_m4_deps = $(top_srcdir)\/configure.ac
 am__cd	Makefile	/^am__cd = CDPATH="$${ZSH_VERSION+.}$(PATH_SEPARATOR)" && cd$/;"	m
 am__configure_deps	Makefile	/^am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \\$/;"	m
 am__depfiles_maybe	Makefile	/^am__depfiles_maybe = depfiles$/;"	m
+am__fastdepCC_FALSE	Makefile	/^am__fastdepCC_FALSE = #$/;"	m
+am__fastdepCC_TRUE	Makefile	/^am__fastdepCC_TRUE = $/;"	m
+am__fastdepCXX_FALSE	Makefile	/^am__fastdepCXX_FALSE = #$/;"	m
+am__fastdepCXX_TRUE	Makefile	/^am__fastdepCXX_TRUE = $/;"	m
 am__include	Makefile	/^am__include = include$/;"	m
 am__installdirs	Makefile	/^am__installdirs = "$(DESTDIR)$(bindir)"$/;"	m
 am__leading_dot	Makefile	/^am__leading_dot = .$/;"	m
@@ -426,7 +429,7 @@ am__quote	Makefile	/^am__quote = $/;"	m
 am__remove_distdir	Makefile	/^am__remove_distdir = \\$/;"	m
 am__tar	Makefile	/^am__tar = ${AMTAR} chof - "$$tardir"$/;"	m
 am__untar	Makefile	/^am__untar = ${AMTAR} xf -$/;"	m
-am_autogrid4_OBJECTS	Makefile	/^am_autogrid4_OBJECTS = autogrid4-main.$(OBJEXT) \\$/;"	m
+am_covalentGrid_OBJECTS	Makefile	/^am_covalentGrid_OBJECTS = covalentGrid-main.$(OBJEXT) \\$/;"	m
 ang	structs.h	/^  double ang;			\/* angle of rotation about unit-vector *\/$/;"	m	struct:quat	access:public
 angstrom	autogrid.h	88;"	d
 apm_enter	atom_parameter_manager.cpp	/^void apm_enter(const char key[], PE value) {$/;"	f	signature:(const char key[], PE value)
@@ -438,10 +441,6 @@ apm_find	prototypes.h	/^ParameterEntry * apm_find( const char key[] );$/;"	p	sig
 app_graphics_render	main.cpp	/^void app_graphics_render(int xs, int ys, double time_of_day) {}$/;"	f	signature:(int xs, int ys, double time_of_day)
 app_graphics_reread_prefs	main.cpp	/^void app_graphics_reread_prefs(){}$/;"	f	signature:()
 arithmetic_mean	constants.h	267;"	d
-as_func_failure	configure	/^as_func_failure () {$/;"	f
-as_func_ret_failure	configure	/^as_func_ret_failure () {$/;"	f
-as_func_ret_success	configure	/^as_func_ret_success () {$/;"	f
-as_func_success	configure	/^as_func_success () {$/;"	f
 atm	structs.h	/^  Atom atm[MAX_ATOMS];		\/* Atom data *\/$/;"	m	struct:group	access:public
 atom	structs.h	/^typedef struct atom$/;"	s
 atom1	structs.h	/^  Atom *atom1;			\/* pointer to one atom in pair *\/$/;"	m	struct:pair_id	access:public
@@ -462,16 +461,11 @@ atom::type	structs.h	/^  int       type;			        \/* atom type as integer *\/$
 atom::type_string	structs.h	/^  char      type_string[MAX_CHARS]; \/* atom type as string *\/$/;"	m	struct:atom	access:public
 atom_type_name	grid.h	/^    char            atom_type_name[MAX_MAPS][3]; \/\/ array of atom type names, corresponding to the grids$/;"	m	struct:grid_map_set_info	access:public
 atomstr	structs.h	/^  char              atomstr[MAX_ATOMS][MAX_CHARS];	\/* strings describing atoms, from PDB file, cols,1-30. *\/$/;"	m	struct:molecule	access:public
-autogrid4_CPPFLAGS	Makefile	/^autogrid4_CPPFLAGS = $(AM_CPPFLAGS)$/;"	m
-autogrid4_LDADD	Makefile	/^autogrid4_LDADD = $(LDADD)$/;"	m
-autogrid4_LINK	Makefile	/^autogrid4_LINK = $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) \\$/;"	m
-autogrid4_OBJECTS	Makefile	/^autogrid4_OBJECTS = $(am_autogrid4_OBJECTS)$/;"	m
-autogrid4_SOURCES	Makefile	/^autogrid4_SOURCES = main.cpp \\$/;"	m
 autogrid_type	parameters.h	/^  char autogrid_type[MAX_LEN_AUTOGRID_TYPE + 1];	\/* autogrid_type is based on babel_types assigned by PyBabel *\/$/;"	m	struct:parameter_entry	access:public
 banner	banner.cpp	/^void banner( char * version_num )$/;"	f	signature:( char * version_num )
 banner	prototypes.h	/^void	banner( char * version_num );$/;"	p	signature:( char * version_num )
 binPROGRAMS_INSTALL	Makefile	/^binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)$/;"	m
-bin_PROGRAMS	Makefile	/^bin_PROGRAMS = autogrid4$(EXEEXT)$/;"	m
+bin_PROGRAMS	Makefile	/^bin_PROGRAMS = covalentGrid$(EXEEXT)$/;"	m
 bindir	Makefile	/^bindir = ${exec_prefix}\/bin$/;"	m
 boinc_app_key_press	main.cpp	/^void boinc_app_key_press(int wParam, int lParam){}$/;"	f	signature:(int wParam, int lParam)
 boinc_app_key_release	main.cpp	/^void boinc_app_key_release(int wParam, int lParam){}$/;"	f	signature:(int wParam, int lParam)
@@ -492,7 +486,6 @@ build_cpu	Makefile	/^build_cpu = x86_64$/;"	m
 build_os	Makefile	/^build_os = linux-gnu$/;"	m
 build_triplet	Makefile	/^build_triplet = x86_64-unknown-linux-gnu$/;"	m
 build_vendor	Makefile	/^build_vendor = unknown$/;"	m
-builddir	Makefile	/^builddir = .$/;"	m
 calc_ddd_Mehler_Solmajer	distdepdiel.cpp	/^double calc_ddd_Mehler_Solmajer( double distance, double approx_zero ) {$/;"	f	signature:( double distance, double approx_zero )
 calc_ddd_Mehler_Solmajer	distdepdiel.h	/^double calc_ddd_Mehler_Solmajer( double distance, double aprrox_zero );$/;"	p	signature:( double distance, double aprrox_zero )
 center	grid.h	/^    double          center[3]; \/\/ central coordinates, in Angstroms$/;"	m	struct:grid_map_set_info	access:public
@@ -516,10 +509,13 @@ coord::x	structs.h	/^  double x;			\/* Cartesian x-coordinate *\/$/;"	m	struct:c
 coord::y	structs.h	/^  double y;			\/* Cartesian y-coordinate *\/$/;"	m	struct:coord	access:public
 coord::z	structs.h	/^  double z;			\/* Cartesian z-coordinate *\/$/;"	m	struct:coord	access:public
 coords	structs.h	/^  double    coords[3];			    \/* transformed point *\/$/;"	m	struct:atom	access:public
+covalentGrid_CPPFLAGS	Makefile	/^covalentGrid_CPPFLAGS = $(AM_CPPFLAGS)$/;"	m
+covalentGrid_LDADD	Makefile	/^covalentGrid_LDADD = $(LDADD)$/;"	m
+covalentGrid_OBJECTS	Makefile	/^covalentGrid_OBJECTS = $(am_covalentGrid_OBJECTS)$/;"	m
+covalentGrid_SOURCES	Makefile	/^covalentGrid_SOURCES = main.cpp \\$/;"	m
 crd	structs.h	/^  Real     crd[MAX_ATOMS][SPACE];      	\/* current coordinates of atoms *\/$/;"	m	struct:molecule	access:public
 crdpdb	structs.h	/^  Real     crdpdb[MAX_ATOMS][SPACE];	    \/* original coordinates of atoms *\/$/;"	m	struct:molecule	access:public
-datadir	Makefile	/^datadir = ${datarootdir}$/;"	m
-datarootdir	Makefile	/^datarootdir = ${prefix}\/share$/;"	m
+datadir	Makefile	/^datadir = ${prefix}\/share$/;"	m
 dc_install_base	Makefile	/^	dc_install_base=`$(am__cd) $(distdir)\/_inst && pwd | sed -e 's,^[^:\\\\\/]:[\\\\\/],\/,'` \\$/;"	m
 depcomp	Makefile	/^depcomp = $(SHELL) $(top_srcdir)\/depcomp$/;"	m
 dictionary	atom_parameter_manager.cpp	/^static PE *dictionary[MAXKEY];$/;"	v	file:
@@ -532,8 +528,6 @@ distcleancheck_listfiles	Makefile	/^distcleancheck_listfiles = find . -type f -p
 distcon	structs.h	/^  DisCon distcon;		\/* Distance constraint data *\/$/;"	m	struct:group	access:public
 distdir	Makefile	/^distdir = $(PACKAGE)-$(VERSION)$/;"	m
 distuninstallcheck_listfiles	Makefile	/^distuninstallcheck_listfiles = find . -type f -print$/;"	m
-docdir	Makefile	/^docdir = ${datarootdir}\/doc\/${PACKAGE_TARNAME}$/;"	m
-dvidir	Makefile	/^dvidir = ${docdir}$/;"	m
 e	structs.h	/^  Energy e;			\/* energy structure *\/$/;"	m	struct:state	access:public
 e_vdW_Hb	structs.h	/^    Real e_vdW_Hb[NEINT][MAX_ATOM_TYPES][MAX_ATOM_TYPES];  \/\/ vdW & Hb energies$/;"	m	struct:energy_tables	access:public
 elements	typedefs.h	/^	float		 elements[4];$/;"	m	union:__anon1
@@ -612,7 +606,6 @@ host_cpu	Makefile	/^host_cpu = x86_64$/;"	m
 host_os	Makefile	/^host_os = linux-gnu$/;"	m
 host_triplet	Makefile	/^host_triplet = x86_64-unknown-linux-gnu$/;"	m
 host_vendor	Makefile	/^host_vendor = unknown$/;"	m
-htmldir	Makefile	/^htmldir = ${docdir}$/;"	m
 hypotenuse	constants.h	273;"	d
 hypotenuse4	constants.h	275;"	d
 hypotenuse4_F	constants.h	276;"	d
@@ -625,9 +618,9 @@ ignuin	ranlib.h	/^extern FourByteLong ignuin(FourByteLong low,FourByteLong high)
 includedir	Makefile	/^includedir = ${prefix}\/include$/;"	m
 index_to_Ang	constants.h	280;"	d
 index_to_SqAng	constants.h	289;"	d
-infodir	Makefile	/^infodir = ${datarootdir}\/info$/;"	m
+infodir	Makefile	/^infodir = ${prefix}\/info$/;"	m
 initgn	ranlib.h	/^extern void initgn(FourByteLong isdtyp);$/;"	p	signature:(FourByteLong isdtyp)
-install_sh	Makefile	/^install_sh = $(SHELL) \/home\/xouyang1\/B-bond\/autodock\/src\/autogrid\/install-sh$/;"	m
+install_sh	Makefile	/^install_sh = \/home\/xouyang1\/B-bond\/autodock\/googlecode\/covalentdock\/autogrid\/install-sh$/;"	m
 install_sh_DATA	Makefile	/^install_sh_DATA = $(install_sh) -c -m 644$/;"	m
 install_sh_PROGRAM	Makefile	/^install_sh_PROGRAM = $(install_sh) -c$/;"	m
 install_sh_SCRIPT	Makefile	/^install_sh_SCRIPT = $(install_sh) -c$/;"	m
@@ -655,7 +648,6 @@ lo	grid.h	/^    double          lo[3]; \/\/ minimum coordinates, in Angstroms$/;
 local_random	constants.h	322;"	d
 local_random	constants.h	326;"	d
 local_random	constants.h	332;"	d
-localedir	Makefile	/^localedir = ${datarootdir}\/locale$/;"	m
 localstatedir	Makefile	/^localstatedir = ${prefix}\/var$/;"	m
 lookup	autogrid.h	89;"	d
 lower	structs.h	/^  double lower;			\/* lower bound on distance *\/$/;"	m	struct:dist_constraint	access:public
@@ -665,7 +657,7 @@ main	config.guess	/^main ()$/;"	f
 main	convertmap.cpp	/^main(int argc, char *argv[])$/;"	f	signature:(int argc, char *argv[])
 main	main.cpp	/^int main( int argc,  char **argv )$/;"	f	signature:( int argc, char **argv )
 main	prototypes.h	/^int	    main( int argc, char **argv );$/;"	p	signature:( int argc, char **argv )
-mandir	Makefile	/^mandir = ${datarootdir}\/man$/;"	m
+mandir	Makefile	/^mandir = ${prefix}\/man$/;"	m
 map_index	parameters.h	/^  int map_index;		\/* used to set up map atom_types *\/$/;"	m	struct:parameter_entry	access:public
 max	autogrid.h	83;"	d
 max	autogrid.h	86;"	d
@@ -673,7 +665,7 @@ max	constants.h	245;"	d
 min	autogrid.h	82;"	d
 min	autogrid.h	87;"	d
 min	constants.h	246;"	d
-mkdir_p	Makefile	/^mkdir_p = \/bin\/mkdir -p$/;"	m
+mkdir_p	Makefile	/^mkdir_p = mkdir -p --$/;"	m
 mkinstalldirs	Makefile	/^mkinstalldirs = $(install_sh) -d$/;"	m
 mltmod	ranlib.h	/^extern FourByteLong mltmod(FourByteLong a,FourByteLong s,FourByteLong m);$/;"	p	signature:(FourByteLong a,FourByteLong s,FourByteLong m)
 molecule	structs.h	/^typedef struct molecule$/;"	s
@@ -732,11 +724,10 @@ parse_param_line	parse_param_line.h	/^int  parse_param_line( char  line[LINE_LEN
 parsetypes	parsetypes.cpp	/^int parsetypes(char * line, char *words[], int maxwords)$/;"	f	signature:(char * line, char *words[], int maxwords)
 parsetypes	prototypes.h	/^int	    parsetypes(char * line, char *words[], int maxwords);$/;"	p	signature:(char * line, char *words[], int maxwords)
 pdbqfilnam	structs.h	/^  char pdbqfilnam[MAX_CHARS];	\/* PDBQ filename holding these data *\/$/;"	m	struct:group	access:public
-pdfdir	Makefile	/^pdfdir = ${docdir}$/;"	m
 phrtsd	ranlib.h	/^extern void phrtsd(char* phrase,FourByteLong* seed1,FourByteLong* seed2);$/;"	p	signature:(char* phrase,FourByteLong* seed1,FourByteLong* seed2)
-pkgdatadir	Makefile	/^pkgdatadir = $(datadir)\/autogrid$/;"	m
-pkgincludedir	Makefile	/^pkgincludedir = $(includedir)\/autogrid$/;"	m
-pkglibdir	Makefile	/^pkglibdir = $(libdir)\/autogrid$/;"	m
+pkgdatadir	Makefile	/^pkgdatadir = $(datadir)\/covgrid$/;"	m
+pkgincludedir	Makefile	/^pkgincludedir = $(includedir)\/covgrid$/;"	m
+pkglibdir	Makefile	/^pkglibdir = $(libdir)\/covgrid$/;"	m
 prHMSfixed	prHMSfixed.cpp	/^void prHMSfixed( float t )$/;"	f	signature:( float t )
 prHMSfixed	prototypes.h	/^void	prHMSfixed( float t );$/;"	p	signature:( float t )
 prefix	Makefile	/^prefix = \/usr\/local$/;"	m
@@ -749,7 +740,6 @@ printhms	printhms.h	/^void  printhms( Real t );$/;"	p	signature:( Real t )
 printhms	prototypes.h	/^void	printhms( float t );$/;"	p	signature:( float t )
 program_transform_name	Makefile	/^program_transform_name = s,x,x,$/;"	m
 prototypes	configure	/^   function prototypes and stuff, but not '\\xHH' hex character constants.$/;"	f
-psdir	Makefile	/^psdir = ${docdir}$/;"	m
 qmag	structs.h	/^  double qmag;			\/* quaternion's 4-D magnitude *\/$/;"	m	struct:quat	access:public
 qsp_abs_charge	structs.h	/^    double qsp_abs_charge;$/;"	m	struct:chargestruct	access:public
 qsp_abs_charge	structs.h	/^  double    qsp_abs_charge;$/;"	m	struct:atom	access:public
@@ -813,6 +803,7 @@ sq	autogrid.h	76;"	d
 sq	constants.h	270;"	d
 sq_hyp	autogrid.h	78;"	d
 sqhypotenuse	constants.h	272;"	d
+sqrt	configure	/^sqrt ();$/;"	f
 srcdir	Makefile	/^srcdir = .$/;"	m
 state	structs.h	/^typedef struct state$/;"	s
 state::Q	structs.h	/^  Quat Q;			\/* rigid-body orientation *\/$/;"	m	struct:state	access:public

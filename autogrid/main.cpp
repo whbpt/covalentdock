@@ -2114,10 +2114,10 @@ for (ia=0;ia< num_receptor_atoms;ia++)
 	if (atom_type[ia]==get_rec_index("LA") || atom_type[ia]==get_rec_index("L") ||
 			atom_type[ia]==get_rec_index("YA") || atom_type[ia]==get_rec_index("YS"))
 	{
-		if (atom_type[ia]==get_rec_index("LA") || atom_type[ia]==get_rec_index("L"))
-			printf("CYS-S %d - (%.3f, %.3f, %.3f) \n",ia,coord[ia][0],coord[ia][1],coord[ia][2]);
-		else if (atom_type[ia]==get_rec_index("YA") || atom_type[ia]==get_rec_index("YS"))
-			printf("SER-O %d - (%.3f, %.3f, %.3f) \n",ia,coord[ia][0],coord[ia][1],coord[ia][2]);
+		//if (atom_type[ia]==get_rec_index("LA") || atom_type[ia]==get_rec_index("L"))
+			//printf("CYS-S %d - (%.3f, %.3f, %.3f) \n",ia,coord[ia][0],coord[ia][1],coord[ia][2]);
+		//else if (atom_type[ia]==get_rec_index("YA") || atom_type[ia]==get_rec_index("YS"))
+			//printf("SER-O %d - (%.3f, %.3f, %.3f) \n",ia,coord[ia][0],coord[ia][1],coord[ia][2]);
 
 		double min_dist=5000;
 		int carb_beta=-1;
@@ -2136,7 +2136,7 @@ for (ia=0;ia< num_receptor_atoms;ia++)
 			}
 		}
 		COV_NEIB[ia]=carb_beta;
-		printf("	neibouring CB %d - (%.3f, %.3f, %.3f)\n", carb_beta, coord[carb_beta][0],coord[carb_beta][1],coord[carb_beta][2]);
+		//printf("	neibouring CB %d - (%.3f, %.3f, %.3f)\n", carb_beta, coord[carb_beta][0],coord[carb_beta][1],coord[carb_beta][2]);
 	}
 }
 
