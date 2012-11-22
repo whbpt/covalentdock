@@ -317,10 +317,17 @@ int COV_LINK_COUNT=0;
 // COMCOV=MAXCOV*MAXCOV
 #define COMCOV 100
 char COV_ANCR[MAXCOV][3]; // anchor name
+memset(COV_ANCR,0,sizeof(COV_ANCR));
 char ORI_ANCR[MAXCOV][3]; // mapping from anchor to original atom when no covalent bonding
+memset(ORI_ANCR,0,sizeof(ORI_ANCR));
 
 char COV_LINK[MAXCOV][3]; // link name
+memset(COV_LINK,0,sizeof(COV_LINK));
 char ORI_LINK[MAXCOV][3]; // mapping from link to original atom when no covalent bonding
+memset(ORI_LINK,0,sizeof(ORI_LINK));
+
+bool COV_MAP[COMCOV];
+for (int i=0;i<COMCOV;i++) COV_MAP[i]=false;
 
 double COV_D      [COMCOV]; // parameters for covalent bonding
 double COV_r0     [COMCOV]; // COMCOV=MAXCOV*MAXCOV
@@ -696,6 +703,7 @@ while( fgets( GPF_line, LINE_LEN, GPF ) != NULL ) {
 		}
 		int seq;
 		seq=acrIndex*MAXCOV+COV_LINK_COUNT;
+		COV_MAP[seq]=true;
 		COV_D[seq]=d;
 		COV_r0[seq]=r;
 		COV_alpha[seq]=a;
@@ -1610,7 +1618,7 @@ for (ia=0; ia<num_atom_maps; ia++){
             /* loop over distance index, indx_r, from 0 to MAX_DIST */ /* GPF_MAP */
             (void) fprintf( logFile, "Calculating energies for %s-%s interactions.\n", gridmap[ia].type, receptor_types[i] );
 
-			//new code from OUYANG XUCHANG
+/*-----------------------------CovalentDock-----------------------------*/
             for (indx_r = 1;  indx_r < MAX_DIST;  indx_r++) {
                 r  = angstrom(indx_r);
                 rA = pow( r, dxA);
@@ -1631,6 +1639,7 @@ for (ia=0; ia<num_atom_maps; ia++){
 					}
 					do_smooth=false;
 				}
+				/*
 				else if ((strcmp(gridmap[ia].type,"V1")==0)&&((i==get_rec_index("LA"))||(i==get_rec_index("L"))))
 				{
 					double d=r-1.83606;
@@ -1649,13 +1658,33 @@ for (ia=0; ia<num_atom_maps; ia++){
 					energy_lookup[i][indx_r][ia] = min(EINTCLAMP, penalty);
 					do_smooth=false;
 				}
+				*/
+//int getCovIndex(char now[3], char (*all)[3], int total)
 				else
-					energy_lookup[i][indx_r][ia] = min(EINTCLAMP, (cA/rA - cB/rB));
-				//energy_lookup[i][indx_r][ia] = min(EINTCLAMP, (cA/rA - cB/rB));
+				{
+					int link=getCovIndex(gridmap[ia].type,COV_LINK,COV_LINK_COUNT);
+					int anchor=getCovIndex(receptor_types[i],COV_ANCR,COV_ANCR_COUNT);
+
+					if (link!=-1 && anchor!=-1 && COV_MAP[anchor*MAXCOV+link])
+					{
+						// we have a bonding pair
+						int seq=anchor*MAXCOV+link;
+						double d=r-COV_r0[seq];
+						double penalty=0;
+						penalty=COV_D[seq]*(exp(-2.0*COV_alpha[seq]*d)-2.0*exp(-1.0*COV_alpha[seq]*d))-COV_entropy[seq]+COV_C[seq];
+						if ((d>0) && (penalty>0)) penalty=0;
+						energy_lookup[i][indx_r][ia] = min(EINTCLAMP, penalty);
+						do_smooth=false;
+					}
+					else
+						energy_lookup[i][indx_r][ia] = min(EINTCLAMP, (cA/rA - cB/rB));
+				}
             } /*for each distance*/ 
 			if (strcmp(gridmap[ia].type,"DM")!=0)
 				energy_lookup[i][0][ia]    = EINTCLAMP;
             energy_lookup[i][MD_1][ia] = 0.;
+/*-----------------------------CovalentDock-----------------------------*/
+
 
             /*PRINT OUT INITIAL VALUES before smoothing here
             (void) fprintf( logFile, "before smoothing\n  r ");
