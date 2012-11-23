@@ -78,6 +78,7 @@ CCLD	Makefile	/^CCLD = $(CC)$/;"	m
 CFLAGS	Makefile	/^CFLAGS = -g -O2$/;"	m
 CLEANFILES	Makefile	/^CLEANFILES = default_parameters.h$/;"	m
 CLOCKS_PER_SEC	constants.h	385;"	d
+COMCOV	main.cpp	318;"	d	file:
 COMPILE	Makefile	/^COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \\$/;"	m
 CONFIG_CLEAN_FILES	Makefile	/^CONFIG_CLEAN_FILES = read_parameter_library.cpp$/;"	m
 CONSTANTS	constants.h	64;"	d
@@ -187,7 +188,7 @@ HI_NRG_JUMP_FACTOR	constants.h	138;"	d
 I	parm.h	73;"	d
 IDmove	structs.h	/^  int IDmove[MAX_ATOMS];	\/* atom serial-IDs of atoms moved by this *\/$/;"	m	struct:torsion	access:public
 INFORMATION	main.cpp	83;"	d	file:
-INIT_NUM_GRID_PTS	main.cpp	422;"	d	file:
+INIT_NUM_GRID_PTS	main.cpp	463;"	d	file:
 INSTALL	Makefile	/^INSTALL = \/usr\/bin\/install -c$/;"	m
 INSTALL_DATA	Makefile	/^INSTALL_DATA = ${INSTALL} -m 644$/;"	m
 INSTALL_HEADER	Makefile	/^INSTALL_HEADER = $(INSTALL_DATA)$/;"	m
@@ -216,7 +217,7 @@ Li	parm.h	75;"	d
 Linear_FE_Model	structs.h	/^} Linear_FE_Model;$/;"	t	typeref:struct:linear_FE_model
 MACROS	constants.h	241;"	d
 MAKEINFO	Makefile	/^MAKEINFO = ${SHELL} \/home\/xouyang1\/B-bond\/autodock\/googlecode\/covalentdock\/autogrid\/missing --run makeinfo$/;"	m
-MAXCOV	main.cpp	296;"	d	file:
+MAXCOV	main.cpp	316;"	d	file:
 MAXKEY	atom_parameter_manager.cpp	27;"	d	file:
 MAX_ATOMS	constants.h	102;"	d
 MAX_ATOMS	constants.h	97;"	d
@@ -273,7 +274,7 @@ NTORDIVS_2	constants.h	115;"	d
 NTRN	constants.h	78;"	d
 NUM_ALL_TYPES	autogrid.h	99;"	d
 NUM_ATM_MOVED	constants.h	188;"	d
-NUM_RECEPTOR_TYPES	main.cpp	223;"	d	file:
+NUM_RECEPTOR_TYPES	main.cpp	237;"	d	file:
 Na	parm.h	78;"	d
 Nam	parm.h	39;"	d
 NewGridMapSet	grid.h	68;"	d
@@ -563,6 +564,7 @@ gennor	ranlib.h	/^extern Real gennor(Real av,Real sd);$/;"	p	signature:(Real av,
 genprm	ranlib.h	/^extern void genprm(FourByteLong *iarray,int larray);$/;"	p	signature:(FourByteLong *iarray,int larray)
 genunf	ranlib.h	/^extern Real genunf(Real low,Real high);$/;"	p	signature:(Real low,Real high)
 geometric_mean	constants.h	268;"	d
+getCovIndex	main.cpp	/^int getCovIndex(char now[3], char (*all)[3], int total)$/;"	f	signature:(char now[3], char (*all)[3], int total)
 get_Rij	parm.h	/^extern float get_Rij(int type1, int type2);$/;"	p	signature:(int type1, int type2)
 get_epsij	parm.h	/^extern float get_epsij(int type1, int type2);$/;"	p	signature:(int type1, int type2)
 get_rec_index	main.cpp	/^static int get_rec_index(const char key[]) {$/;"	f	file:	signature:(const char key[])

@@ -123,13 +123,31 @@ atom_par Q      4.00  0.150  33.5103  -0.00143  0.0  0.0  0  -1  -1  0	# Ring cl
 atom_par DM     0.01  0.001   0.0000  0.000001  0.0  0.0  0  -1  -1  0  # Non H-bonding covalent map
 
 ####################### special atoms in protein for covalent bonding ############################################
-atom_par YA     3.20  0.200  17.1573  -0.00251  1.9  5.0  5  -1  -1  2	# Acceptor 2 H-bonds Oxygen: ori OA
-atom_par YS     3.20  0.200  17.1573  -0.00251  1.9  5.0  3  -1  -1  2	# Acceptor S Spherical Oxygen: ori OS
-atom_par LA     4.00  0.200  33.5103  -0.00214  2.5  1.0  5  -1  -1  6	# Acceptor 2 H-bonds Sulphur: ori SA
-atom_par L      4.00  0.200  33.5103  -0.00214  0.0  0.0  0  -1  -1  6	# Non H-bonding Sulphur: ori S
+#atom_par YA     3.20  0.200  17.1573  -0.00251  1.9  5.0  5  -1  -1  2	# Acceptor 2 H-bonds Oxygen: ori OA
+#atom_par YS     3.20  0.200  17.1573  -0.00251  1.9  5.0  3  -1  -1  2	# Acceptor S Spherical Oxygen: ori OS
+#atom_par LA     4.00  0.200  33.5103  -0.00214  2.5  1.0  5  -1  -1  6	# Acceptor 2 H-bonds Sulphur: ori SA
+#atom_par L      4.00  0.200  33.5103  -0.00214  0.0  0.0  0  -1  -1  6	# Non H-bonding Sulphur: ori S
+atom_par X0     0.01  0.001   0.0000  0.000001  0.0  0.0  0  -1  -1  0  # Non H-bonding covalent map
+atom_par X1     0.01  0.001   0.0000  0.000001  0.0  0.0  0  -1  -1  0  # Non H-bonding covalent map
+atom_par X2     0.01  0.001   0.0000  0.000001  0.0  0.0  0  -1  -1  0  # Non H-bonding covalent map
+atom_par X3     0.01  0.001   0.0000  0.000001  0.0  0.0  0  -1  -1  0  # Non H-bonding covalent map
+atom_par X4     0.01  0.001   0.0000  0.000001  0.0  0.0  0  -1  -1  0  # Non H-bonding covalent map
+atom_par X5     0.01  0.001   0.0000  0.000001  0.0  0.0  0  -1  -1  0  # Non H-bonding covalent map
+atom_par X6     0.01  0.001   0.0000  0.000001  0.0  0.0  0  -1  -1  0  # Non H-bonding covalent map
+atom_par X7     0.01  0.001   0.0000  0.000001  0.0  0.0  0  -1  -1  0  # Non H-bonding covalent map
+atom_par X8     0.01  0.001   0.0000  0.000001  0.0  0.0  0  -1  -1  0  # Non H-bonding covalent map
+atom_par X9     0.01  0.001   0.0000  0.000001  0.0  0.0  0  -1  -1  0  # Non H-bonding covalent map
 
 ####################### special atoms in ligand for covalent bonding ############################################
-atom_par V1      4.00  0.150  33.5103  -0.00143  0.0  0.0  0  -1  -1  0	# Non H-bonding Aliphatic Carbon
-atom_par V2      4.00  0.150  33.5103  -0.00143  0.0  0.0  0  -1  -1  0	# Non H-bonding Aliphatic Carbon
-
-
+#atom_par V1      4.00  0.150  33.5103  -0.00143  0.0  0.0  0  -1  -1  0	# Non H-bonding Aliphatic Carbon
+#atom_par V2      4.00  0.150  33.5103  -0.00143  0.0  0.0  0  -1  -1  0	# Non H-bonding Aliphatic Carbon
+atom_par V0     0.01  0.001   0.0000  0.000001  0.0  0.0  0  -1  -1  0  # Non H-bonding covalent map
+atom_par V1     0.01  0.001   0.0000  0.000001  0.0  0.0  0  -1  -1  0  # Non H-bonding covalent map
+atom_par V2     0.01  0.001   0.0000  0.000001  0.0  0.0  0  -1  -1  0  # Non H-bonding covalent map
+atom_par V3     0.01  0.001   0.0000  0.000001  0.0  0.0  0  -1  -1  0  # Non H-bonding covalent map
+atom_par V4     0.01  0.001   0.0000  0.000001  0.0  0.0  0  -1  -1  0  # Non H-bonding covalent map
+atom_par V5     0.01  0.001   0.0000  0.000001  0.0  0.0  0  -1  -1  0  # Non H-bonding covalent map
+atom_par V6     0.01  0.001   0.0000  0.000001  0.0  0.0  0  -1  -1  0  # Non H-bonding covalent map
+atom_par V7     0.01  0.001   0.0000  0.000001  0.0  0.0  0  -1  -1  0  # Non H-bonding covalent map
+atom_par V8     0.01  0.001   0.0000  0.000001  0.0  0.0  0  -1  -1  0  # Non H-bonding covalent map
+atom_par V9     0.01  0.001   0.0000  0.000001  0.0  0.0  0  -1  -1  0  # Non H-bonding covalent map

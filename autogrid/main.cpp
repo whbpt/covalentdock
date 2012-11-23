@@ -681,6 +681,36 @@ while( fgets( GPF_line, LINE_LEN, GPF ) != NULL ) {
 		}
         (void) sscanf( GPF_line, "%*s %2s %2s",COV_ANCR[COV_ANCR_COUNT],ORI_ANCR[COV_ANCR_COUNT]);
         (void) fprintf( logFile, "\nNew covalent anchor detected: %s, which normally looks like a %s\n\n", COV_ANCR[COV_ANCR_COUNT],ORI_ANCR[COV_ANCR_COUNT]);
+		
+		// update the grid parameters to match the ORI_ANCR
+		int ancrSeq;
+		ancrSeq=get_rec_index(COV_ANCR[COV_ANCR_COUNT]);
+		found_parm = apm_find(ORI_ANCR[COV_ANCR_COUNT]);
+		for (i=0;i<num_maps;i++)
+		{
+	        gridmap[i].nbp_r[ancrSeq] = (gridmap[i].Rij + found_parm->Rij)/2.;
+			gridmap[i].nbp_eps[ancrSeq] = sqrt(gridmap[i].epsij * found_parm->epsij);
+			gridmap[i].xA[ancrSeq] = 12;
+			gridmap[i].xB[ancrSeq] = 6;
+			gridmap[i].hbonder[ancrSeq] = 0;
+			if ((int)(gridmap[i].hbond)>2 && ((int)found_parm->hbond==1||(int)found_parm->hbond==2))
+			{ /*AS,A1,A2 map vs DS,D1 probe*/
+				gridmap[i].xB[ancrSeq] = 10;
+				gridmap[i].hbonder[ancrSeq] = 1;
+				gridmap[i].is_hbonder = TRUE;
+				gridmap[i].nbp_r[ancrSeq] = gridmap[i].Rij_hb;
+				gridmap[i].nbp_eps[ancrSeq] = gridmap[i].epsij_hb;
+			}
+			else if (((int)gridmap[i].hbond==1||(int)gridmap[i].hbond==2) && ((int)found_parm->hbond>2))
+			{ /*DS,D1 map vs AS,A1,A2 probe*/
+				gridmap[i].xB[ancrSeq] = 10;
+				gridmap[i].hbonder[ancrSeq] = 1;
+				gridmap[i].is_hbonder = TRUE;
+				gridmap[i].nbp_r[ancrSeq] = found_parm->Rij_hb;
+				gridmap[i].nbp_eps[ancrSeq] = found_parm->epsij_hb;
+	        }
+		}
+		
 		COV_ANCR_COUNT++;
 		break;
 	case GPF_LINK:
@@ -720,6 +750,69 @@ while( fgets( GPF_line, LINE_LEN, GPF ) != NULL ) {
 		(void) fprintf( logFile, "Empirical correction:      %7.3lf\n",COV_C[seq]);
 		(void) fprintf( logFile, "Optimal angle theta:       %7.3lf\n\n",COV_theta[seq]);
 
+
+		// update the grid map calculation parameters
+		int linkSeq;
+		linkSeq=-1;
+		for (i=0;i<num_maps;i++)
+			if (strcmp(gridmap[i].type,COV_LINK[COV_LINK_COUNT])==0)
+			{
+				linkSeq=i; break;
+			}
+		
+		if (linkSeq==-1)
+		{
+			(void) sprintf( message, "There's no atom type named %2s found in GPF.\n",COV_LINK[COV_LINK_COUNT]);
+	           print_error( logFile, ERROR, message );
+	        print_error( logFile, FATAL_ERROR, "Unsuccessful completion.\n\n" );
+		}
+		found_parm = apm_find(ORI_LINK[COV_LINK_COUNT]);
+        gridmap[linkSeq].solpar_probe = found_parm->solpar;
+        gridmap[linkSeq].vol_probe = found_parm->vol;
+		gridmap[linkSeq].Rij = found_parm->Rij;
+        gridmap[linkSeq].epsij = found_parm->epsij;
+        gridmap[linkSeq].hbond = found_parm->hbond;
+        gridmap[linkSeq].Rij_hb = found_parm->Rij_hb;
+        gridmap[linkSeq].epsij_hb = found_parm->epsij_hb;
+        if (gridmap[linkSeq].hbond>0){
+			gridmap[linkSeq].is_hbonder=TRUE;}
+
+        for (j=0; j<receptor_types_ct; j++)
+		{
+			if (strcmp(receptor_types[j],anchor)==0)
+			{
+				// no need to update this
+				// the anchor - link parameter won't be used
+				// will be override with Morse potential
+				continue;
+			}
+			else
+			{
+	            found_parm = apm_find(receptor_types[j]);
+		        gridmap[linkSeq].nbp_r[j] = (gridmap[linkSeq].Rij + found_parm->Rij)/2.;
+				gridmap[linkSeq].nbp_eps[j] = sqrt(gridmap[linkSeq].epsij * found_parm->epsij);
+				gridmap[linkSeq].xA[j] = 12;
+				gridmap[linkSeq].xB[j] = 6;
+				gridmap[linkSeq].hbonder[j] = 0;
+				if ((int)(gridmap[linkSeq].hbond)>2 && ((int)found_parm->hbond==1||(int)found_parm->hbond==2))
+				{ /*AS,A1,A2 map vs DS,D1 probe*/
+					gridmap[linkSeq].xB[j] = 10;
+					gridmap[linkSeq].hbonder[j] = 1;
+					gridmap[linkSeq].is_hbonder = TRUE;
+					gridmap[linkSeq].nbp_r[j] = gridmap[linkSeq].Rij_hb;
+					gridmap[linkSeq].nbp_eps[j] = gridmap[linkSeq].epsij_hb;
+				}
+				else if (((int)gridmap[linkSeq].hbond==1||(int)gridmap[linkSeq].hbond==2) && ((int)found_parm->hbond>2))
+				{ /*DS,D1 map vs AS,A1,A2 probe*/
+					gridmap[linkSeq].xB[j] = 10;
+					gridmap[linkSeq].hbonder[j] = 1;
+					gridmap[linkSeq].is_hbonder = TRUE;
+					gridmap[linkSeq].nbp_r[j] = found_parm->Rij_hb;
+					gridmap[linkSeq].nbp_eps[j] = found_parm->epsij_hb;
+		        }
+			}
+		}
+		
 		COV_LINK_COUNT++;
 		break;
 /*-----------------------------CovalentDock-----------------------------*/
