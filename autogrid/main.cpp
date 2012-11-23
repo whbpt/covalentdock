@@ -1720,8 +1720,9 @@ for (ia=0; ia<num_atom_maps; ia++){
 				if (strcmp(gridmap[ia].type,"DM")==0)
 				{
 					double penalty=-exp(-r*r/0.055556);
-					if ((i==get_rec_index("LA"))||(i==get_rec_index("L")) 
-							|| (i==get_rec_index("YA"))||(i==get_rec_index("YS")))
+					//if ((i==get_rec_index("LA"))||(i==get_rec_index("L")) 
+							//|| (i==get_rec_index("YA"))||(i==get_rec_index("YS")))
+					if (getCovIndex(receptor_types[i],COV_ANCR,COV_ANCR_COUNT)!=-1)
 					{
 						energy_lookup[i][indx_r][ia] = min(EINTCLAMP, penalty*2);
 						if (indx_r==1) energy_lookup[i][0][ia]=-2;
@@ -2326,24 +2327,24 @@ if (floating_grid) {
  */
 ic = 0;
 ctr = 0;
-//OUYANG XUCHANG
 
+/*-----------------------------CovalentDock-----------------------------*/
 for (ia=0;ia< num_receptor_atoms;ia++)
 {
 	COV_NEIB[ia]=-1;
-	if (atom_type[ia]==get_rec_index("LA") || atom_type[ia]==get_rec_index("L") ||
-			atom_type[ia]==get_rec_index("YA") || atom_type[ia]==get_rec_index("YS"))
+
+//	atom_type[ia] is the seq of atom type
+//	receptor_types[atom_type[ia]] is the name of the atom type
+//
+	if (getCovIndex(receptor_types[atom_type[ia]],COV_ANCR,COV_ANCR_COUNT)!=-1)
 	{
-		//if (atom_type[ia]==get_rec_index("LA") || atom_type[ia]==get_rec_index("L"))
-			//printf("CYS-S %d - (%.3f, %.3f, %.3f) \n",ia,coord[ia][0],coord[ia][1],coord[ia][2]);
-		//else if (atom_type[ia]==get_rec_index("YA") || atom_type[ia]==get_rec_index("YS"))
-			//printf("SER-O %d - (%.3f, %.3f, %.3f) \n",ia,coord[ia][0],coord[ia][1],coord[ia][2]);
+		//printf("%s %d - (%.3f, %.3f, %.3f) \n",receptor_types[atom_type[ia]],ia,coord[ia][0],coord[ia][1],coord[ia][2]);
 
 		double min_dist=5000;
 		int carb_beta=-1;
 		for (ib = max(ia-20,0); ib<min(ia+20,num_receptor_atoms-1);ib++)
 		{
-			if (atom_type[ib]==get_rec_index("C"))
+			if (atom_type[ib]==get_rec_index("C")) // is this one need to be parameterized???
 			{
 				for (i = 0;  i < XYZ;  i++)
 					d[i] = coord[ia][i] - coord[ib][i];
@@ -2359,6 +2360,7 @@ for (ia=0;ia< num_receptor_atoms;ia++)
 		//printf("	neibouring CB %d - (%.3f, %.3f, %.3f)\n", carb_beta, coord[carb_beta][0],coord[carb_beta][1],coord[carb_beta][2]);
 	}
 }
+/*-----------------------------CovalentDock-----------------------------*/
 
 
 for (icoord[Z] = -ne[Z]; icoord[Z] <= ne[Z]; icoord[Z]++) {
@@ -2673,12 +2675,15 @@ for (icoord[Z] = -ne[Z]; icoord[Z] <= ne[Z]; icoord[Z]++) {
                     }
                 } /* end atom_type tests used to set rdon and racc */
 				
-				//OUYANG XUCHANG
-				double coef=1;
+/*-----------------------------CovalentDock-----------------------------*/
+				double coef=1.0;
+				int anchor=getCovIndex(receptor_types[atom_type[ia]],COV_ANCR,COV_ANCR_COUNT);
+				double angle=0;
 				// beta---ia```c
 				// if ia is S on CYS, beta is the beta carbon on CYS, c is the current point
-				if (atom_type[ia]==get_rec_index("LA") || atom_type[ia]==get_rec_index("L") || 
-						atom_type[ia]==get_rec_index("YA") || atom_type[ia]==get_rec_index("YS"))
+				//if (atom_type[ia]==get_rec_index("LA") || atom_type[ia]==get_rec_index("L") || 
+						//atom_type[ia]==get_rec_index("YA") || atom_type[ia]==get_rec_index("YS"))
+				if (anchor != -1)
 				{
 					int beta=COV_NEIB[ia];
 					//d[XYZ] is the coordinates of ia
@@ -2704,14 +2709,15 @@ for (icoord[Z] = -ne[Z]; icoord[Z] <= ne[Z]; icoord[Z]++) {
 
 					//angle in radians
 					//ideal angle from MMFF94 is 0.54733PI
-					double angle=acos(prod/(len1*len2));
-					if (atom_type[ia]==get_rec_index("LA") || atom_type[ia]==get_rec_index("L"))
-						coef=cos(angle-0.560191*PI);
-					else if (atom_type[ia]==get_rec_index("YA") || atom_type[ia]==get_rec_index("YS"))
-						coef=cos(angle-0.664564*PI);
-					coef=coef*coef*coef*coef;
+					angle=acos(prod/(len1*len2));
+					//double ideal=COV_theta[anchor*MAXCOV+link]/180.0*PI;
+					//if (atom_type[ia]==get_rec_index("LA") || atom_type[ia]==get_rec_index("L"))
+						//coef=cos(angle-0.560191*PI);
+					//else if (atom_type[ia]==get_rec_index("YA") || atom_type[ia]==get_rec_index("YS"))
+						//coef=cos(angle-0.664564*PI);
+					//coef=cos(angle-ideal);
+					//coef=coef*coef*coef*coef;
 				}
-			//	coef=1;
 
                 /*
                  * For each probe atom-type,
@@ -2724,12 +2730,23 @@ for (icoord[Z] = -ne[Z]; icoord[Z] <= ne[Z]; icoord[Z]++) {
                      * for any covalent maps, make sure iscovalent is
                      * false... */                    
                     maptypeptr = gridmap[map_index].type;
+					int link  =getCovIndex(maptypeptr,COV_LINK,COV_LINK_COUNT);
+					if (anchor!=-1 && link!=-1)
+					{
+						double ideal=COV_theta[anchor*MAXCOV+link]/180.0*PI;
+						coef=cos(angle-ideal); coef=coef*coef*coef*coef;
+						//printf("%lf\n",coef);
+					}
+					else
+						coef=1.0;
+
 
                     if (gridmap[map_index].is_covalent == FALSE) {
 						if (strcmp(maptypeptr,"DM")==0)
 						{
-							if (atom_type[ia]==get_rec_index("LA") || atom_type[ia]==get_rec_index("L")
-									|| atom_type[ia]==get_rec_index("YS") || atom_type[ia]==get_rec_index("YA"))
+							//if (atom_type[ia]==get_rec_index("LA") || atom_type[ia]==get_rec_index("L")
+									//|| atom_type[ia]==get_rec_index("YS") || atom_type[ia]==get_rec_index("YA"))
+							if (getCovIndex(receptor_types[atom_type[ia]],COV_ANCR,COV_ANCR_COUNT)!=-1)
 							{
 								gridmap[map_index].energy+=energy_lookup[atom_type[ia]][indx_r][map_index];
 								continue;
@@ -2745,14 +2762,16 @@ for (icoord[Z] = -ne[Z]; icoord[Z] <= ne[Z]; icoord[Z]++) {
                                       &&(hbond[ia]==1||hbond[ia]==2)){/*DS or D1*/
                                   /* PROBE can be an H-BOND ACCEPTOR, */
                                 if (disorder[ia] == FALSE ) {
-									if (strcmp(maptypeptr,"V1")==0 || strcmp(maptypeptr,"V2")==0)
+									//if (strcmp(maptypeptr,"V1")==0 || strcmp(maptypeptr,"V2")==0)
+									if (anchor!=-1 && link!=-1)
 	                                    gridmap[map_index].energy += energy_lookup[atom_type[ia]][indx_r][map_index] *coef* Hramp * (racc + (1. - racc)*rsph);
 									else
 	                                    gridmap[map_index].energy += energy_lookup[atom_type[ia]][indx_r][map_index] * Hramp * (racc + (1. - racc)*rsph);
 
 
                                 } else {
-									if (strcmp(maptypeptr,"V1")==0 || strcmp(maptypeptr,"V2")==0)
+									//if (strcmp(maptypeptr,"V1")==0 || strcmp(maptypeptr,"V2")==0)
+									if (anchor!=-1 && link!=-1)
 										gridmap[map_index].energy += energy_lookup[hydrogen][max(0, indx_r - 110)][map_index] *coef* Hramp * (racc + (1. - racc)*rsph);
 									else
 										gridmap[map_index].energy += energy_lookup[hydrogen][max(0, indx_r - 110)][map_index] * Hramp * (racc + (1. - racc)*rsph);
@@ -2771,7 +2790,8 @@ for (icoord[Z] = -ne[Z]; icoord[Z] <= ne[Z]; icoord[Z]++) {
                                 hbondflag[map_index] = TRUE;
                             } else {
                                 /*  hbonder PROBE-ia cannot form a H-bond..., */
-								if (strcmp(maptypeptr,"V1")==0 || strcmp(maptypeptr,"V2")==0)
+								//if (strcmp(maptypeptr,"V1")==0 || strcmp(maptypeptr,"V2")==0)
+								if (anchor!=-1 && link!=-1)
 									gridmap[map_index].energy += energy_lookup[atom_type[ia]][indx_r][map_index]*coef;
 								else
 									gridmap[map_index].energy += energy_lookup[atom_type[ia]][indx_r][map_index];
@@ -2779,12 +2799,14 @@ for (icoord[Z] = -ne[Z]; icoord[Z] <= ne[Z]; icoord[Z]++) {
                             }
                         } else { /*end of is_hbonder*/
                             /*  PROBE does not form H-bonds..., */
-							if (strcmp(maptypeptr,"V1")==0 || strcmp(maptypeptr,"V2")==0)
+							//if (strcmp(maptypeptr,"V1")==0 || strcmp(maptypeptr,"V2")==0)
+							if (anchor!=-1 && link!=-1)
 								gridmap[map_index].energy += energy_lookup[atom_type[ia]][indx_r][map_index]*coef;
 							else
 								gridmap[map_index].energy += energy_lookup[atom_type[ia]][indx_r][map_index];
 
                         }/* end hbonder tests */
+/*-----------------------------CovalentDock-----------------------------*/
 
                         /* add desolvation energy  */
                         /* forcefield desolv coefficient/weight in sol_fn*/
