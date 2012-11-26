@@ -175,5 +175,10 @@ Copyright (C) 2009 The Scripps Research Institute. All rights reserved.
 #define DPF_PSO_SSM		125	
 #define DPF_PARSWARMOPT	126	
 #define GA_LINEAR_RANKING_SELECTION	127
+
+//CovalentDock
+#define DPF_LINK 202
+
+
 #endif
 /* EOF */

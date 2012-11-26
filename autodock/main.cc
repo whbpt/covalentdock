@@ -125,6 +125,20 @@ int S_factor=30; // Swarm size
 double xmin[D_max], xmax[D_max]; // Intervals defining the search space
 double Vmin[D_max], Vmax[D_max]; // Intervals defining the search space
 
+/*-----------------------------CovalentDock-----------------------------*/
+int getCovIndex(char now[3], char (*all)[3], int total)
+{
+	for (int i=0;i<total;i++)
+	{
+		if (now[0]==all[i][0] && now[1]==all[i][1])
+		{
+			return i;
+		}
+	}
+	return -1;
+}
+/*-----------------------------CovalentDock-----------------------------*/
+
 int main (int argc, char ** argv)
 
 
@@ -362,6 +376,20 @@ Boole B_use_non_bond_cutoff = TRUE;
 Boole B_have_flexible_residues = FALSE;  // if the receptor has flexible residues, this will be set to TRUE
 Boole B_rms_atoms_ligand_only = TRUE;  // cluster on the ligand atoms only
 Boole B_reorient_random = FALSE; // if true, create a new random orientation before docking
+
+/*-----------------------------CovalentDock-----------------------------*/
+Boole B_have_link = FALSE;
+
+int COV_LINK_COUNT=0;
+
+#define MAXCOV 10
+char COV_LINK[MAXCOV][3]; // link name
+memset(COV_LINK,0,sizeof(COV_LINK));
+char ORI_LINK[MAXCOV][3]; // mapping from link to original atom when no covalent bonding
+memset(ORI_LINK,0,sizeof(ORI_LINK));
+
+/*-----------------------------CovalentDock-----------------------------*/
+
 int atm1=0;
 int atm2=0;
 int a1=0;
@@ -717,6 +745,21 @@ while( fgets(line, LINE_LEN, parFile) != NULL ) { /* PARSING-DPF parFile */
         (void) sscanf( line, "%*s %s", FN_flexres );
         break;
 
+/*-----------------------------CovalentDock-----------------------------*/
+	case DPF_LINK:
+		if (COV_LINK_COUNT>=MAXCOV)
+		{
+            (void) sprintf( error_message, "Too many covalent link atoms.\n");
+            stop( error_message );
+		}
+		B_have_link = TRUE;
+		(void) sscanf( line, "%*s %2s %2s",COV_LINK[COV_LINK_COUNT],ORI_LINK[COV_LINK_COUNT]);
+        pr( logFile, "Covalent link atom detected.\nLink atom: %s, look like a %s.\n", COV_LINK[COV_LINK_COUNT], ORI_LINK[COV_LINK_COUNT]);
+        (void) fflush(logFile);
+		COV_LINK_COUNT++;
+		break;
+/*-----------------------------CovalentDock-----------------------------*/
+
     default:
         break;
     } // switch( dpf_keyword )
@@ -1055,7 +1098,7 @@ while( fgets(line, LINE_LEN, parFile) != NULL ) { /* PARSING-DPF parFile */
         // For all ligand atom types... set up the map_index
         // "ligand_types"
         for (i=0; i<num_atom_types; i++) {
-            foundParameter = apm_find(info->atom_type_name[i]);
+	        foundParameter = apm_find(info->atom_type_name[i]);
             if (foundParameter != NULL ) {
                 // Not NULL means we have found this atom type's parameters.
                 // Set the ParameterEntry's "map_index" member to the
@@ -1087,6 +1130,11 @@ while( fgets(line, LINE_LEN, parFile) != NULL ) { /* PARSING-DPF parFile */
 
         // Calculate the internal energy table
 
+/*-----------------------------CovalentDock-----------------------------*/
+		int link1,link2;
+		link1=-1;
+		link2=-1;
+/*-----------------------------CovalentDock-----------------------------*/
         // loop over atom types, i, from 1 to number of atom types
         for (i=0; i<num_atom_types; i++) {
 
@@ -1098,6 +1146,19 @@ while( fgets(line, LINE_LEN, parFile) != NULL ) { /* PARSING-DPF parFile */
             Ri_hb = parameterArray[i].Rij_hb;
             epsi_hb = parameterArray[i].epsij_hb;
             hbondi = parameterArray[i].hbond;
+			
+/*-----------------------------CovalentDock-----------------------------*/
+			link1=getCovIndex(parameterArray[i].autogrid_type,COV_LINK,COV_LINK_COUNT);
+			if (link1!=-1)
+			{
+				foundParameter = apm_find(ORI_LINK[link1]);
+				Ri = foundParameter->Rij;
+	            epsi = foundParameter->epsij;
+		        Ri_hb = foundParameter->Rij_hb;
+			    epsi_hb = foundParameter->epsij_hb;
+				hbondi = foundParameter->hbond;
+			}
+/*-----------------------------CovalentDock-----------------------------*/
 
             // loop over atom types, j, from i to number of atom types
             for (j=i; j<num_atom_types; j++) {
@@ -1111,6 +1172,19 @@ while( fgets(line, LINE_LEN, parFile) != NULL ) { /* PARSING-DPF parFile */
                 epsj_hb = parameterArray[j].epsij_hb;
                 hbondj = parameterArray[j].hbond;
 
+/*-----------------------------CovalentDock-----------------------------*/
+				link2=getCovIndex(parameterArray[i].autogrid_type,COV_LINK,COV_LINK_COUNT);
+				if (link2!=-1)
+				{
+					foundParameter = apm_find(ORI_LINK[link2]);
+					Ri = foundParameter->Rij;
+		            epsi = foundParameter->epsij;
+			        Ri_hb = foundParameter->Rij_hb;
+				    epsi_hb = foundParameter->epsij_hb;
+					hbondi = foundParameter->hbond;
+				}
+/*-----------------------------CovalentDock-----------------------------*/
+	
                 // we need to determine the correct xA and xB exponents
                 xA = 12; // for both LJ, 12-6 and HB, 12-10, xA is 12
                 xB =  6; // assume we have LJ, 12-6

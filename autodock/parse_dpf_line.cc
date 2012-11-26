@@ -204,6 +204,8 @@ int parse_dpf_line( char line[LINE_LEN] )
 #if defined(USING_COLINY)
               , {"coliny", DPF_COLINY}  
 #endif
+			  //CovalentDock
+			  , {"link", DPF_LINK}
               , {"//END", DPF_NULL}
               };
 

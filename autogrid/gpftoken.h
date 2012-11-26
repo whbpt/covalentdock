@@ -49,5 +49,5 @@ Copyright (C) 2009 The Scripps Research Institute. All rights reserved.
 #define GPF_QASP	23
 
 //CovalentDock
-#define GPF_ANCHOR 51
-#define GPF_LINK 52
+#define GPF_ANCHOR 201
+#define GPF_LINK 202

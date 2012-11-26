@@ -714,7 +714,7 @@ while( fgets( GPF_line, LINE_LEN, GPF ) != NULL ) {
 		COV_ANCR_COUNT++;
 		break;
 	case GPF_LINK:
-		if (COV_ANCR_COUNT>=MAXCOV)
+		if (COV_LINK_COUNT>=MAXCOV)
 		{
             (void) sprintf( message, "Too many covalent link atoms.\n");
             print_error( logFile, ERROR, message );
