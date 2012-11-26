@@ -2735,7 +2735,7 @@ for (icoord[Z] = -ne[Z]; icoord[Z] <= ne[Z]; icoord[Z]++) {
 					{
 						double ideal=COV_theta[anchor*MAXCOV+link]/180.0*PI;
 						coef=cos(angle-ideal); coef=coef*coef*coef*coef;
-						//printf("%lf\n",coef);
+						//printf("%8lf %8lf %8lf %8lf\n",ideal,angle,angle-ideal,coef);
 					}
 					else
 						coef=1.0;
