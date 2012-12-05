@@ -320,6 +320,9 @@ char COV_ANCR[MAXCOV][3]; // anchor name
 memset(COV_ANCR,0,sizeof(COV_ANCR));
 char ORI_ANCR[MAXCOV][3]; // mapping from anchor to original atom when no covalent bonding
 memset(ORI_ANCR,0,sizeof(ORI_ANCR));
+bool USED_ANCR[MAXCOV];
+for (int i=0;i<MAXCOV;i++) USED_ANCR[i]=false; // check whether this anchor has any link associated or not, affect the DM well
+
 
 char COV_LINK[MAXCOV][3]; // link name
 memset(COV_LINK,0,sizeof(COV_LINK));
@@ -731,6 +734,7 @@ while( fgets( GPF_line, LINE_LEN, GPF ) != NULL ) {
 	           print_error( logFile, ERROR, message );
 	        print_error( logFile, FATAL_ERROR, "Unsuccessful completion.\n\n" );
 		}
+		USED_ANCR[acrIndex]=true;
 		int seq;
 		seq=acrIndex*MAXCOV+COV_LINK_COUNT;
 		COV_MAP[seq]=true;
@@ -788,7 +792,9 @@ while( fgets( GPF_line, LINE_LEN, GPF ) != NULL ) {
 			}
 			else
 			{
+				int now=getCovIndex(receptor_types[j],COV_ANCR,COV_ANCR_COUNT);
 	            found_parm = apm_find(receptor_types[j]);
+				if (now!=-1) found_parm=apm_find(ORI_ANCR[now]);
 		        gridmap[linkSeq].nbp_r[j] = (gridmap[linkSeq].Rij + found_parm->Rij)/2.;
 				gridmap[linkSeq].nbp_eps[j] = sqrt(gridmap[linkSeq].epsij * found_parm->epsij);
 				gridmap[linkSeq].xA[j] = 12;
@@ -1717,12 +1723,11 @@ for (ia=0; ia<num_atom_maps; ia++){
                 rA = pow( r, dxA);
                 rB = pow( r, dxB);
 				
+				int anchor=getCovIndex(receptor_types[i],COV_ANCR,COV_ANCR_COUNT);
 				if (strcmp(gridmap[ia].type,"DM")==0)
 				{
 					double penalty=-exp(-r*r/0.055556);
-					//if ((i==get_rec_index("LA"))||(i==get_rec_index("L")) 
-							//|| (i==get_rec_index("YA"))||(i==get_rec_index("YS")))
-					if (getCovIndex(receptor_types[i],COV_ANCR,COV_ANCR_COUNT)!=-1)
+					if (anchor != -1 && USED_ANCR[anchor])
 					{
 						energy_lookup[i][indx_r][ia] = min(EINTCLAMP, penalty*2);
 						if (indx_r==1) energy_lookup[i][0][ia]=-2;
@@ -1757,7 +1762,6 @@ for (ia=0; ia<num_atom_maps; ia++){
 				else
 				{
 					int link=getCovIndex(gridmap[ia].type,COV_LINK,COV_LINK_COUNT);
-					int anchor=getCovIndex(receptor_types[i],COV_ANCR,COV_ANCR_COUNT);
 
 					if (link!=-1 && anchor!=-1 && COV_MAP[anchor*MAXCOV+link])
 					{
