@@ -1,0 +1,28 @@
+#!/bin/bash
+
+input=$1
+name=$(basename $input| cut -f1 -d.)
+
+mkdir TEMP
+cp $input TEMP/
+cp min.in TEMP/
+cp tleap.in TEMP/
+
+cd TEMP/
+
+$ABT_HOME/bin/antechamber -i $input -fi mol2 -o temp.mol2 -fo mol2 -c gas -s 0 -nc 0 
+$ABT_HOME/bin/parmchk -i temp.mol2 -f mol2 -o temp.frcmod
+#mv mopac.pdb temp.pdb
+#mv mopac.in temp.in
+#mv mopac.out temp.out
+$ABT_HOME/bin/tleap -f tleap.in
+$AB_HOME/bin/sander -O -i ./min.in -o ./temp.out -p ./temp.prmtop -c ./temp.inpcrd -r ./mini.crd
+$AB_HOME/bin/ambpdb -p ./temp.prmtop < ./mini.crd > ./mini.pdb
+
+$ABT_HOME/bin/antechamber -i mini.pdb -fi pdb -o ${name}_amber.mol2 -fo mol2 -c gas -s 0 -nc 0 
+
+cp ${name}_amber.mol2 ../
+
+cd ../
+
+rm -r -f TEMP/

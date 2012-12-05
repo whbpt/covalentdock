@@ -1,0 +1,10 @@
+source leaprc.ff99SB
+source leaprc.gaff
+
+TEMP=loadmol2 temp.mol2
+check TEMP
+loadamberparams temp.frcmod
+saveoff TEMP temp.lib
+saveamberparm TEMP temp.prmtop temp.inpcrd
+
+quit
