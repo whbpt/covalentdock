@@ -1,0 +1,9 @@
+#small molecule minimization
+ &cntrl
+  imin=1,
+  maxcyc=500,
+  ncyc=100,
+  ntb=0,
+  igb=1,
+  cut=16,
+ &end

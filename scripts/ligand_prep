@@ -1,0 +1,77 @@
+#!/bin/bash
+
+filename=$1
+name=$(basename $filename | cut -f1 -d.)
+
+./covDetect.py $filename > cov_detect
+while [ $(wc -l cov_detect | cut -f1 -d' ') -gt 0 ]
+do
+	list=$(cat cov_detect)
+	:> cov_detect
+	for one in $list
+	do
+		./covDetect.py $one >> cov_detect
+	done
+	rm *_bond*_unbond*
+done
+
+ls ${name}_bond* > all
+
+ls ${name}_bond* | cut -f1 -d. | cut -f3- -d_ | sed 's/_bond/ bond/g' > repeat
+./one_only.py > bond_one_only
+:> pre_amber
+for one in $(cat bond_one_only)
+do
+	echo ${name}'_'$one'.mol2' >> pre_amber
+done
+
+for one in $(cat pre_amber)
+do
+	sed -i '/'$one'/d' all
+done
+
+for one in $(cat all)
+do
+	rm $one
+done
+
+$ADT_HOME/bin/pythonsh $ADT_HOME/MGLToolsPckgs/AutoDockTools/Utilities24/prepare_ligand4.py -l ${name}_unbond.mol2 -o ${name}_unbond.pdbqt
+
+for one in $(cat pre_amber)
+do
+	one_name=$(basename $one | cut -f1 -d.)
+	bond_list=$(echo $one_name | cut -f3- -d_ | sed 's/_bond/ bond/g')
+	./minimization ${one_name}.mol2
+	./mini_final.py ${one_name}
+	
+	$ADT_HOME/bin/pythonsh $ADT_HOME/MGLToolsPckgs/AutoDockTools/Utilities24/prepare_ligand4.py -l ${one_name}_mini.mol2 -o ${one_name}_mini.pdbqt -B 'amide'
+	
+	for bond in $bond_list
+	do
+		TYPE=$(echo $bond | cut -f2 -d_)
+		ATOM=$(echo $bond | cut -f3 -d_)
+
+		case $TYPE in
+		'1')	
+			sed -i '/ '$ATOM' /s/C $/V1/g' ${one_name}_mini.pdbqt
+			sed -i '/ '$ATOM' /s/A $/V1/g' ${one_name}_mini.pdbqt
+			sed -i '/ Dum /s/S $/DM/g' ${one_name}_mini.pdbqt
+			sed -i '/ Dum /s/SA$/DM/g' ${one_name}_mini.pdbqt
+			sed -i '/DM$/s/^\(.\{70\}\)....../\1 0.000/g' ${one_name}_mini.pdbqt
+			;;
+		'2')
+			sed -i '/ '$ATOM' /s/C $/V2/g' ${one_name}_mini.pdbqt
+			sed -i '/ '$ATOM' /s/A $/V2/g' ${one_name}_mini.pdbqt
+			sed -i '/ Dum /s/OS$/DM/g' ${one_name}_mini.pdbqt
+			sed -i '/ Dum /s/OA$/DM/g' ${one_name}_mini.pdbqt
+			sed -i '/DM$/s/^\(.\{70\}\)....../\1 0.000/g' ${one_name}_mini.pdbqt
+			;;
+		esac
+	done
+
+	rm ${one_name}_amber.mol2
+	rm ${one_name}.mol2
+
+	echo ${one_name}_mini.pdbqt >> process_ligand
+done
+

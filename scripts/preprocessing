@@ -1,0 +1,78 @@
+#!/bin/bash
+
+name=$1
+ligand=${name}_ligand.mol2
+receptor=${name}_receptor.pdb
+
+mkdir prep
+cd prep
+#cp $CD_HOME/script/* .
+cp ~/B-bond/autodock/googlecode/covalentdock/scripts/* .
+cp ../${name}_ligand.mol2 .
+cp ../${name}_receptor.pdb .
+
+echo "Processing receptor..."
+./receptor_prep ${name}_receptor.pdb >out
+echo "Processing ligand..."
+./ligand_prep ${name}_ligand.mol2 >> out 2>>err
+
+cent=$(cat ../center)
+
+echo "Preparing for non-covalent docking files..."
+echo 'gridcenter '$cent > ref
+$ADT_HOME/bin/pythonsh $ADT_HOME/MGLToolsPckgs/AutoDockTools/Utilities24/prepare_gpf4.py -l ${name}_ligand_unbond.pdbqt -r ${name}_receptor_unbond.pdbqt -o ${name}_unbond.gpf -i ref >> out
+$ADT_HOME/bin/pythonsh $ADT_HOME/MGLToolsPckgs/AutoDockTools/Utilities24/prepare_dpf42.py -l ${name}_ligand_unbond.pdbqt -r ${name}_receptor_unbond.pdbqt -o ${name}_unbond.dpf -p ga_num_evals=5000000 >> out
+
+mkdir ../unbond
+cp ${name}_receptor_unbond.pdbqt ../unbond
+cp ${name}_ligand_unbond.pdbqt ../unbond
+cp ${name}_unbond.gpf ../unbond
+cp ${name}_unbond.dpf ../unbond
+
+echo "Preparing for covalent docking files..."
+
+mkdir ../bond
+
+centX=$(cat ../center | cut -f1 -d' ')
+centY=$(cat ../center | cut -f2 -d' ')
+centZ=$(cat ../center | cut -f3 -d' ')
+
+
+# we may need to filter out the structures that has not possible anchor in the binding site
+ls *ligand_bond_*.pdbqt > process_ligand
+
+
+#echo -n '' > atom_list
+for one in $(cat process_ligand)
+do
+	body=$(basename $one | cut -f1 -d.)
+	rot=$(grep "active torsions" ${body}.pdbqt | tr -s [:blank:] | cut -f2 -d' ')
+	#$ADT_HOME/bin/pythonsh $ADT_HOME/MGLToolsPckgs/AutoDockTools/Utilities24/prepare_dpf42.py -l $one -r ${name}_receptor_bond.pdbqt -o ${body}.dpf -p ga_num_evals=1000>> out
+	$ADT_HOME/bin/pythonsh $ADT_HOME/MGLToolsPckgs/AutoDockTools/Utilities24/prepare_dpf42.py -l $one -r ${name}_receptor_bond.pdbqt -o ${body}.dpf -p ga_num_evals=$[2500000+${rot}*500000] >> out
+	if [ $(grep "V1$" ${body}.pdbqt | wc -l) -gt 0 ]; then echo "link V1 C" >> ${body}.dpf; fi
+	if [ $(grep "V2$" ${body}.pdbqt | wc -l) -gt 0 ]; then echo "link V2 C" >> ${body}.dpf; fi
+	cp $one ../bond
+	cp ${body}.dpf ../bond
+done
+
+bond=$(head -n 1 process_ligand)
+$ADT_HOME/bin/pythonsh $ADT_HOME/MGLToolsPckgs/AutoDockTools/Utilities24/prepare_gpf4.py -l $bond -r ${name}_receptor_bond.pdbqt -o get_npts -i ref -d ../bond/ -p spacing=0.2 >> out
+n_x=$(grep '^npts' get_npts | tr -s [:blank:] | cut -f2 -d' ')
+n_y=$(grep '^npts' get_npts | tr -s [:blank:] | cut -f3 -d' ')
+n_z=$(grep '^npts' get_npts | tr -s [:blank:] | cut -f4 -d' ')
+echo 'npts '$[${n_x}*2]' '$[${n_y}*2]' '$[${n_z}*2] >> ref
+$ADT_HOME/bin/pythonsh $ADT_HOME/MGLToolsPckgs/AutoDockTools/Utilities24/prepare_gpf4.py -l $bond -r ${name}_receptor_bond.pdbqt -o ${name}_bond.gpf -i ref -d ../bond/ -p spacing=0.2 >> out
+
+if [ $(grep "^receptor_types.*X0" ${name}_bond.gpf | wc -l) -gt 0 ]; then echo "anchor X0 SA" >> ${name}_bond.gpf; fi
+if [ $(grep "^receptor_types.*X1" ${name}_bond.gpf | wc -l) -gt 0 ]; then echo "anchor X1 OA" >> ${name}_bond.gpf; fi
+if [ $(grep "V1$" ${name}_ligand*.pdbqt | wc -l) -gt 0 ]; then echo "link V1 C X0 10.1626 1.83606 3.4055 -4.6202 0.0000 100.83" >> ${name}_bond.gpf; fi
+if [ $(grep "V2$" ${name}_ligand*.pdbqt | wc -l) -gt 0 ]; then echo "link V2 C X1 21.5449 1.35852 3.7758 -10.9614 0.000 119.62" >> ${name}_bond.gpf; fi
+
+
+
+
+cp ${name}_bond.gpf ../bond
+cp ${name}_receptor_bond.pdbqt ../bond
+
+echo "Preprocessing done!"
+#echo 'Now use $CD_HOME/covalentGrid and $CD_HOME/covalentDock to perform covalent docking with the file in directory ./bond'
